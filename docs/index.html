@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>买第一辆电车 · 车型库</title>
+<style>
+  :root { --border:#e5e7eb; --muted:#6b7280; --accent:#2563eb; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; color:#111827; background:#f9fafb; }
+  header { padding:24px 20px 12px; max-width:1200px; margin:0 auto; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:13px; }
+  .controls { max-width:1200px; margin:0 auto; padding:8px 20px 16px; display:flex; flex-wrap:wrap; gap:10px; align-items:center; }
+  .controls input, .controls select { padding:7px 10px; border:1px solid var(--border); border-radius:8px; font-size:14px; background:#fff; }
+  .controls input { flex:1; min-width:200px; }
+  .count { color:var(--muted); font-size:13px; }
+  main { max-width:1200px; margin:0 auto; padding:0 20px 40px; }
+  .table-wrap { overflow-x:auto; background:#fff; border:1px solid var(--border); border-radius:10px; }
+  table { border-collapse:collapse; width:100%; font-size:13.5px; }
+  th, td { padding:9px 12px; text-align:left; border-bottom:1px solid var(--border); white-space:nowrap; }
+  th { background:#f3f4f6; font-weight:600; cursor:default; position:sticky; top:0; }
+  th.sortable { cursor:pointer; }
+  th.sortable:hover { color:var(--accent); }
+  td.hl { white-space:normal; max-width:260px; color:#374151; }
+  td a { color:var(--accent); text-decoration:none; }
+  td.num { font-variant-numeric:tabular-nums; }
+  .empty { color:var(--muted); }
+  footer { max-width:1200px; margin:0 auto; padding:0 20px 40px; color:var(--muted); font-size:12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>买第一辆电车 · 车型库</h1>
+  <div class="sub">数据由脚本自动抓取自各品牌官方源，仅供参考，以官方最新发布为准。</div>
+</header>
+
+<div class="controls">
+  <input id="q" type="search" placeholder="搜索车型 / 亮点…" />
+  <select id="f-brand"><option value="">全部品牌</option></select>
+  <select id="f-powertrain"><option value="">全部动力类型</option></select>
+  <select id="f-category"><option value="">全部类别</option></select>
+  <span class="count" id="count"></span>
+</div>
+
+<main>
+  <div class="table-wrap">
+    <table id="tbl">
+      <thead>
+        <tr>
+          <th data-k="brand">品牌</th>
+          <th data-k="model">车型</th>
+          <th data-k="powertrain">动力类型</th>
+          <th data-k="category">类别</th>
+          <th data-k="price_min" class="sortable">价格区间</th>
+          <th data-k="range_cltc_km" class="sortable">续航(CLTC)</th>
+          <th data-k="battery_type">电池类型</th>
+          <th data-k="battery_kwh" class="sortable">电量(kWh)</th>
+          <th data-k="adas">智驾</th>
+          <th data-k="highlights">定位亮点</th>
+          <th data-k="url">链接</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+
+<footer id="foot"></footer>
+
+<script>
+const PRICE_LABEL = p => p == null ? "" : (p >= 10000 ? (p / 10000).toFixed(p % 10000 ? 2 : 1).replace(/\.0$/,"") + "万" : p + "元");
+const fmtPrice = (lo, hi) => lo == null && hi == null ? "" : PRICE_LABEL(lo) + (hi && hi !== lo ? " – " + PRICE_LABEL(hi) : "");
+const fmtRange = v => v == null || v === "" ? "" : v + " km";
+const fmtKwh = v => v == null || v === "" ? "" : v;
+
+let data = [];
+let sortKey = null, sortDir = 1;
+
+function uniq(field) {
+  return [...new Set(data.map(r => r[field]).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"zh"));
+}
+function populateFilters() {
+  const fill = (sel, field) => {
+    const el = document.getElementById(sel);
+    uniq(field).forEach(v => { const o = document.createElement("option"); o.value = v; o.textContent = v; el.appendChild(o); });
+  };
+  fill("f-brand","brand"); fill("f-powertrain","powertrain"); fill("f-category","category");
+}
+
+function matches(r) {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const b = document.getElementById("f-brand").value;
+  const p = document.getElementById("f-powertrain").value;
+  const c = document.getElementById("f-category").value;
+  if (b && r.brand !== b) return false;
+  if (p && r.powertrain !== p) return false;
+  if (c && r.category !== c) return false;
+  if (q && !(r.model + " " + (r.highlights||"")).toLowerCase().includes(q)) return false;
+  return true;
+}
+
+function render() {
+  let rows = data.filter(matches);
+  if (sortKey) rows.sort((a,b) => {
+    const av = a[sortKey], bv = b[sortKey];
+    if (av === bv) return 0;
+    if (av == null || av === "") return 1;
+    if (bv == null || bv === "") return -1;
+    return (av > bv ? 1 : -1) * sortDir;
+  });
+  const tbody = document.querySelector("#tbl tbody");
+  tbody.innerHTML = "";
+  rows.forEach(r => {
+    const tr = document.createElement("tr");
+    const cells = [
+      r.brand, r.model, r.powertrain, r.category,
+      fmtPrice(r.price_min, r.price_max), fmtRange(r.range_cltc_km),
+      r.battery_type, fmtKwh(r.battery_kwh), r.adas,
+    ];
+    cells.forEach((v,i) => {
+      const td = document.createElement("td");
+      td.textContent = v == null ? "" : v;
+      if (i===4 || i===5 || i===7) td.className = "num";
+      tr.appendChild(td);
+    });
+    const hl = document.createElement("td");
+    hl.className = "hl";
+    hl.textContent = r.highlights || "";
+    tr.appendChild(hl);
+    const link = document.createElement("td");
+    if (r.url) { const a = document.createElement("a"); a.href = r.url; a.target = "_blank"; a.textContent = "查看"; link.appendChild(a); }
+    tr.appendChild(link);
+    tbody.appendChild(tr);
+  });
+  document.getElementById("count").textContent = `${rows.length} / ${data.length} 款`;
+}
+
+document.querySelectorAll("th.sortable").forEach(th => {
+  th.addEventListener("click", () => {
+    const k = th.dataset.k;
+    if (sortKey === k) sortDir = -sortDir; else { sortKey = k; sortDir = 1; }
+    render();
+  });
+});
+["q","f-brand","f-powertrain","f-category"].forEach(id =>
+  document.getElementById(id).addEventListener("input", render));
+
+fetch("data.json")
+  .then(r => r.json())
+  .then(rows => {
+    data = rows;
+    populateFilters();
+    render();
+    const latest = rows.map(r => r.fetched_at).filter(Boolean).sort().slice(-1)[0];
+    document.getElementById("foot").textContent =
+      `共 ${rows.length} 款车型 · 数据来源：各品牌官方接口 · 最近采集：${latest || "—"} · 由脚本自动生成`;
+  })
+  .catch(e => { document.getElementById("count").textContent = "加载失败：" + e; });
+</script>
+</body>
+</html>
