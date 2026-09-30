@@ -22,7 +22,11 @@
   th { background:#f3f4f6; font-weight:600; cursor:default; position:sticky; top:0; }
   th.sortable { cursor:pointer; }
   th.sortable:hover { color:var(--accent); }
-  td.hl { white-space:normal; max-width:260px; color:#374151; }
+  td.hl { white-space:normal; max-width:260px; color:#374151; vertical-align:top; }
+  td.hl .hl-text { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; line-height:1.5; min-height:4.5em; }
+  td.hl.expanded .hl-text { display:block; overflow:visible; }
+  td.hl .hl-toggle { display:none; margin-top:2px; padding:0; border:0; background:none; color:var(--accent); font-size:12px; line-height:1.2; cursor:pointer; }
+  td.hl .hl-toggle.show { display:inline-block; }
   td a { color:var(--accent); text-decoration:none; }
   td.num { font-variant-numeric:tabular-nums; }
   td.logo { width:44px; }
@@ -150,12 +154,29 @@ function render() {
     });
     const hl = document.createElement("td");
     hl.className = "hl";
-    hl.textContent = r.highlights || "";
+    const hlText = document.createElement("span");
+    hlText.className = "hl-text";
+    hlText.textContent = r.highlights || "";
+    hl.appendChild(hlText);
+    const hlToggle = document.createElement("button");
+    hlToggle.type = "button";
+    hlToggle.className = "hl-toggle";
+    hlToggle.textContent = "查看更多";
+    hlToggle.addEventListener("click", () => {
+      const expanded = hl.classList.toggle("expanded");
+      hlToggle.textContent = expanded ? "收起" : "查看更多";
+    });
+    hl.appendChild(hlToggle);
     tr.appendChild(hl);
     const link = document.createElement("td");
     if (r.url) { const a = document.createElement("a"); a.href = r.url; a.target = "_blank"; a.textContent = "查看"; link.appendChild(a); }
     tr.appendChild(link);
     tbody.appendChild(tr);
+  });
+  tbody.querySelectorAll("td.hl").forEach(td => {
+    const t = td.querySelector(".hl-text");
+    const btn = td.querySelector(".hl-toggle");
+    if (t.scrollHeight > t.clientHeight + 1) btn.classList.add("show");
   });
   document.getElementById("count").textContent = `${rows.length} / ${data.length} 款`;
 }
