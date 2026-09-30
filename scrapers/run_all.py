@@ -11,6 +11,7 @@ from scrapers.core.writer import write_brand  # noqa: E402
 REGISTRY = [
     ("byd", "scrapers.byd.scraper", "fetch"),
     ("xiaomi", "scrapers.xiaomi.scraper", "fetch"),
+    ("tesla", "scrapers.tesla.scraper", "fetch"),
 ]
 
 
