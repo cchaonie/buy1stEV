@@ -12,6 +12,7 @@ REGISTRY = [
     ("byd", "scrapers.byd.scraper", "fetch"),
     ("xiaomi", "scrapers.xiaomi.scraper", "fetch"),
     ("tesla", "scrapers.tesla.scraper", "fetch"),
+    ("nio", "scrapers.nio.scraper", "fetch"),
 ]
 
 
