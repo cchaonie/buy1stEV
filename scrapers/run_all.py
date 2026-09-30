@@ -13,6 +13,7 @@ REGISTRY = [
     ("xiaomi", "scrapers.xiaomi.scraper", "fetch"),
     ("tesla", "scrapers.tesla.scraper", "fetch"),
     ("nio", "scrapers.nio.scraper", "fetch"),
+    ("xpeng", "scrapers.xpeng.scraper", "fetch"),
 ]
 
 
