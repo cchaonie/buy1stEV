@@ -1,12 +1,12 @@
 ﻿brand,model,powertrain,category,price_min,price_max,price_text,range_cltc_km,battery_type,battery_kwh,ac_charge_kw,charging_platform,adas,highlights,url,source,fetched_at
-极氪,9X,插混,SUV,465900,599900,46.59万 - 59.99万,355,,70.0,,900V,千里浩瀚H7 / 千里浩瀚H9,全球超豪华SUV新旗舰；混动高压架构900V；综合续航(CLTC)*1250km；算力1400TOPS*双Thor-U,https://m.zeekrlife.com/zeekr9x?versionGroupId=1,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,8X,插混,SUV,356800,500800,35.68万 - 50.08万,410,,70.0,,全栈900V,千里浩瀚H7 / 千里浩瀚H9,超级电混高性能旗舰SUV；混动高压架构全栈900V；综合续航(CLTC)*1416km；数字底盘浩瀚AI,https://m.zeekrlife.com/zeekr8x,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,7X,纯电,SUV,229800,269800,22.98万 - 26.98万,802,,103.0,,900V,千里浩瀚H7,全家都满意的豪华SUV；高压架构*900V；续航里程(CLTC)*802km；总算力700TOPSThor-U,https://m.zeekrlife.com/zeekr7x,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,X,纯电,SUV,155800,175800,15.58万 - 17.58万,530,,66.0,,,,全球新奢都市SUV；续航里程(CLTC)*530km；百公里加速3.69s；电机峰值功率365kW,https://m.zeekrlife.com/zeekrx,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,007GT,纯电,轿跑,203900,243900,20.39万 - 24.39万,880,,103.0,,900V,千里浩瀚H7,科技猎装轿跑；高压架构*900V；续航里程(CLTC)*880km；算力700TOPSThor-U,https://m.zeekrlife.com/zeekr007gt,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,001,纯电,轿跑,269800,365000,26.98万 - 36.5万,810,,103.0,,900V,千里浩瀚H7,豪华猎装轿跑；高压系统900V；百公里加速*2.83s；音乐厅星空,https://m.zeekrlife.com/zeekr001,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,001 FR,纯电,轿跑,769000,769000,76.9万,,,100.0,,,千里浩瀚H7,全能猎装超跑；分布式电驱4电机；最大马力1265Ps；百公里加速*2.02s,https://m.zeekrlife.com/zeekr001FR,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,007,纯电,轿车,203900,243900,20.39万 - 24.39万,905,,103.0,,900V,千里浩瀚H7,豪华运动轿车；高压架构*900V；百公里加速*2.73s；算力700TOPSThor-U,https://m.zeekrlife.com/zeekr007,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,009,纯电,MPV,439800,469800,43.98万 - 46.98万,740,,115.0,,全栈900V,千里浩瀚H7,豪华旗舰MPV；高压架构全栈900V；续航里程(CLTC)*740km；数字底盘浩瀚AI,https://m.zeekrlife.com/zeekr009,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,009 光辉系列,纯电,MPV,789000,899000,78.9万 - 89.9万,702,,108.0,,800V,千里浩瀚H7 / Mobileye,四座超豪华旗舰；高压系统800V；续航里程(CLTC)*702km；独立商务舱4座,https://m.zeekrlife.com/zeekr009grand,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
-极氪,MIX,纯电,MPV,279900,299900,27.99万 - 29.99万,702,,102.0,,800V,千里浩瀚H7,全场景超级座舱；全栈高压系统800V；超大进出空间1480mm；电动旋转座椅270°,https://m.zeekrlife.com/zeekrmix,zeekrlife.com,2026-09-30T00:19:53.206757+00:00
+极氪,9X,插混,SUV,465900,599900,46.59万 - 59.99万,355,,70.0,,900V,千里浩瀚H7 / 千里浩瀚H9,全球超豪华SUV新旗舰；混动高压架构900V；综合续航(CLTC)*1250km；算力1400TOPS*双Thor-U,https://m.zeekrlife.com/zeekr9x?versionGroupId=1,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,8X,插混,SUV,356800,500800,35.68万 - 50.08万,410,,70.0,,全栈900V,千里浩瀚H7 / 千里浩瀚H9,超级电混高性能旗舰SUV；混动高压架构全栈900V；综合续航(CLTC)*1416km；数字底盘浩瀚AI,https://m.zeekrlife.com/zeekr8x,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,7X,纯电,SUV,229800,269800,22.98万 - 26.98万,802,,103.0,,900V,千里浩瀚H7,全家都满意的豪华SUV；高压架构*900V；续航里程(CLTC)*802km；总算力700TOPSThor-U,https://m.zeekrlife.com/zeekr7x,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,X,纯电,SUV,155800,175800,15.58万 - 17.58万,530,,66.0,,,,全球新奢都市SUV；续航里程(CLTC)*530km；百公里加速3.69s；电机峰值功率365kW,https://m.zeekrlife.com/zeekrx,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,007GT,纯电,轿跑,203900,243900,20.39万 - 24.39万,880,,103.0,,900V,千里浩瀚H7,科技猎装轿跑；高压架构*900V；续航里程(CLTC)*880km；算力700TOPSThor-U,https://m.zeekrlife.com/zeekr007gt,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,001,纯电,轿跑,269800,365000,26.98万 - 36.5万,810,,103.0,,900V,千里浩瀚H7,豪华猎装轿跑；高压系统900V；百公里加速*2.83s；音乐厅星空,https://m.zeekrlife.com/zeekr001,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,001 FR,纯电,轿跑,769000,769000,76.9万,,,100.0,,,千里浩瀚H7,全能猎装超跑；分布式电驱4电机；最大马力1265Ps；百公里加速*2.02s,https://m.zeekrlife.com/zeekr001FR,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,007,纯电,轿车,203900,243900,20.39万 - 24.39万,905,,103.0,,900V,千里浩瀚H7,豪华运动轿车；高压架构*900V；百公里加速*2.73s；算力700TOPSThor-U,https://m.zeekrlife.com/zeekr007,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,009,纯电,MPV,439800,469800,43.98万 - 46.98万,740,,115.0,,全栈900V,千里浩瀚H7,豪华旗舰MPV；高压架构全栈900V；续航里程(CLTC)*740km；数字底盘浩瀚AI,https://m.zeekrlife.com/zeekr009,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,009 光辉系列,纯电,MPV,789000,899000,78.9万 - 89.9万,702,,108.0,,800V,千里浩瀚H7 / Mobileye,四座超豪华旗舰；高压系统800V；续航里程(CLTC)*702km；独立商务舱4座,https://m.zeekrlife.com/zeekr009grand,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
+极氪,MIX,纯电,MPV,279900,299900,27.99万 - 29.99万,702,,102.0,,800V,千里浩瀚H7,全场景超级座舱；全栈高压系统800V；超大进出空间1480mm；电动旋转座椅270°,https://m.zeekrlife.com/zeekrmix,zeekrlife.com,2026-09-30T07:05:07.857900+00:00
