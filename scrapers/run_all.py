@@ -14,6 +14,7 @@ REGISTRY = [
     ("tesla", "scrapers.tesla.scraper", "fetch"),
     ("nio", "scrapers.nio.scraper", "fetch"),
     ("xpeng", "scrapers.xpeng.scraper", "fetch"),
+    ("lixiang", "scrapers.lixiang.scraper", "fetch"),
 ]
 
 
