@@ -25,6 +25,8 @@
   td.hl { white-space:normal; max-width:260px; color:#374151; }
   td a { color:var(--accent); text-decoration:none; }
   td.num { font-variant-numeric:tabular-nums; }
+  td.logo { width:44px; }
+  td.logo img { height:22px; width:auto; max-width:36px; object-fit:contain; display:block; }
   .empty { color:var(--muted); }
   footer { max-width:1200px; margin:0 auto; padding:0 20px 40px; color:var(--muted); font-size:12px; }
 </style>
@@ -48,6 +50,7 @@
     <table id="tbl">
       <thead>
         <tr>
+          <th data-k="logo">图标</th>
           <th data-k="brand">品牌</th>
           <th data-k="model">车型</th>
           <th data-k="powertrain">动力类型</th>
@@ -73,6 +76,16 @@ const PRICE_LABEL = p => p == null ? "" : (p >= 10000 ? (p / 10000).toFixed(p % 
 const fmtPrice = (lo, hi) => lo == null && hi == null ? "" : PRICE_LABEL(lo) + (hi && hi !== lo ? " – " + PRICE_LABEL(hi) : "");
 const fmtRange = v => v == null || v === "" ? "" : v + " km";
 const fmtKwh = v => v == null || v === "" ? "" : v;
+const LOGOS = {
+  "比亚迪": "logos/byd.svg",
+  "小米": "logos/xiaomi.svg",
+  "特斯拉": "logos/tesla.svg",
+  "蔚来": "logos/nio.png",
+  "小鹏": "logos/xpeng.png",
+  "理想": "logos/lixiang.png",
+  "极氪": "logos/zeekr.png",
+  "问界": "logos/aito.svg",
+};
 
 let data = [];
 let sortKey = null, sortDir = 1;
@@ -113,6 +126,17 @@ function render() {
   tbody.innerHTML = "";
   rows.forEach(r => {
     const tr = document.createElement("tr");
+    const icon = document.createElement("td");
+    icon.className = "logo";
+    const logo = LOGOS[r.brand];
+    if (logo) {
+      const img = document.createElement("img");
+      img.src = logo;
+      img.alt = r.brand;
+      img.loading = "lazy";
+      icon.appendChild(img);
+    }
+    tr.appendChild(icon);
     const cells = [
       r.brand, r.model, r.powertrain, r.category,
       fmtPrice(r.price_min, r.price_max), fmtRange(r.range_cltc_km),
