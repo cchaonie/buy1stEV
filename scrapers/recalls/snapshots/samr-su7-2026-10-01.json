@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "samr-su7-2026-10-01",
+  "source_id": "samr",
+  "official_index_url": "https://www.samr.gov.cn/zw/zh/index.html",
+  "retrieved_on": "2026-10-01",
+  "publication_searched_from": "2025-01-24",
+  "publication_searched_through": "2025-09-19",
+  "query_description": "在国家市场监督管理总局召回栏目中，以当前车型库的小米 SU7 车系为对象，定位并逐篇打开可访问的官方召回公告正文。",
+  "scope": "这是截至 2026-10-01 对当前车型库中小米 SU7 车系所作的定向官方候选公告清单；不表示该栏目、该日期范围或全国召回史的全量结果。",
+  "candidates": [
+    {
+      "candidate_id": "samr-su7-2025-01-24",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_589f94caf6ad48a484fcf97135ca3eb5.html",
+      "title": "小米汽车科技有限公司召回部分SU7标准版 电动汽车",
+      "announcement_date": "2025-01-24",
+      "official_scope": "2024年2月6日至2024年11月26日生产的部分SU7标准版电动汽车。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-su7-2025-01",
+      "decision_reason": "官方正文完整，已核验为召回公告并保守匹配至当前车型库 SU7 车系。"
+    },
+    {
+      "candidate_id": "samr-su7-2025-09-19",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_2152a981c72a430b9d10d6ef5cd9c09b.html",
+      "title": "小米汽车科技有限公司召回部分SU7标准版 电动汽车",
+      "announcement_date": "2025-09-19",
+      "official_scope": "2024年2月6日至2025年8月30日生产的部分SU7标准版电动汽车。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-su7-2025-09",
+      "decision_reason": "官方正文完整，已核验为召回公告并保守匹配至当前车型库 SU7 车系。"
+    }
+  ],
+  "snapshot_sha256": "795622610431312c258dc062c67b7350be328b84002718baf28f21281df17a49"
+}

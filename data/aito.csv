@@ -1,6 +1,6 @@
-﻿brand,model,powertrain,category,price_min,price_max,price_text,range_cltc_km,battery_type,battery_kwh,ac_charge_kw,charging_platform,adas,highlights,url,source,fetched_at
-问界,M5,增程/纯电,SUV,229800,249800,22.98万 - 24.98万,1440,磷酸铁锂 / 三元锂,83,7,,华为ADS,问界 新M5；1440 公里长续航；全系华为乾崑智驾® ADS 4；舒享智慧空间；更多精彩等你体验,https://aito.auto/model/m5-new/,aito.auto,2026-10-01T07:30:10.014979+00:00
-问界,M6,增程/纯电,SUV,229800,299800,22.98万 - 29.98万,1605,磷酸铁锂 / 三元锂,100,7,800V,华为ADS,问界 M6；新锐智慧 SUV。正体态中大型设计；1.915 米宽敞空间；还有随动中控屏、副驾灵感橱窗等智趣设计。搭载华为途灵平台、华为乾崑智驾® ADS,https://aito.auto/model/m6/,aito.auto,2026-10-01T07:30:10.014979+00:00
-问界,M7,增程/纯电,SUV,279800,389800,27.98万 - 38.98万,1690,磷酸铁锂 / 三元锂,100,7,800V,华为ADS,问界M7；幸福旗舰；华为乾崑智驾® ADS 5；华为途灵平台；全维硬核安全,https://aito.auto/model/m7-new/,aito.auto,2026-10-01T07:30:10.014979+00:00
-问界,M8,增程/纯电,SUV,359800,459800,35.98万 - 45.98万,1590,磷酸铁锂 / 三元锂,100,7,800V,华为ADS,问界 M8 家庭智慧旗舰 SUV；舒适的家；享六座；大五座。超大空间；排排都宽敞；五星健康座舱；开阔后备箱；舒适抵达远方。搭载华为途灵平台、HUAWEI ADS、全向防碰撞、鸿蒙座舱,https://aito.auto/model/m8/,aito.auto,2026-10-01T07:30:10.014979+00:00
-问界,M9,增程/纯电,SUV,479800,659800,47.98万 - 65.98万,1405,三元锂,120,7,800V,华为ADS,领世外观设计；百变奢享空间；全景智能座舱；沉浸视听体验；华为 ADS 辅助驾驶系统；安全玄武车身；伴你开拓,https://aito.auto/model/m9-new/,aito.auto,2026-10-01T07:30:10.014979+00:00
+﻿brand,model,powertrain,category,price_min,price_max,price_text,range_cltc_km,battery_type,battery_kwh,ac_charge_kw,charging_platform,adas,highlights,url,source,fetched_at,recall_history
+问界,M5,增程/纯电,SUV,229800,249800,22.98万 - 24.98万,1440,磷酸铁锂 / 三元锂,83,7,,华为ADS,问界 新M5；1440 公里长续航；全系华为乾崑智驾® ADS 4；舒享智慧空间；更多精彩等你体验,https://aito.auto/model/m5-new/,aito.auto,2026-09-30T07:05:22.672760+00:00,
+问界,M6,增程/纯电,SUV,229800,299800,22.98万 - 29.98万,1605,磷酸铁锂 / 三元锂,100,7,800V,华为ADS,问界 M6；新锐智慧 SUV。正体态中大型设计；1.915 米宽敞空间；还有随动中控屏、副驾灵感橱窗等智趣设计。搭载华为途灵平台、华为乾崑智驾® ADS,https://aito.auto/model/m6/,aito.auto,2026-09-30T07:05:22.672760+00:00,
+问界,M7,增程/纯电,SUV,279800,389800,27.98万 - 38.98万,1690,磷酸铁锂 / 三元锂,100,7,800V,华为ADS,问界M7；幸福旗舰；华为乾崑智驾® ADS 5；华为途灵平台；全维硬核安全,https://aito.auto/model/m7-new/,aito.auto,2026-09-30T07:05:22.672760+00:00,
+问界,M8,增程/纯电,SUV,359800,459800,35.98万 - 45.98万,1590,磷酸铁锂 / 三元锂,100,7,800V,华为ADS,问界 M8 家庭智慧旗舰 SUV；舒适的家；享六座；大五座。超大空间；排排都宽敞；五星健康座舱；开阔后备箱；舒适抵达远方。搭载华为途灵平台、HUAWEI ADS、全向防碰撞、鸿蒙座舱,https://aito.auto/model/m8/,aito.auto,2026-09-30T07:05:22.672760+00:00,
+问界,M9,增程/纯电,SUV,479800,659800,47.98万 - 65.98万,1405,三元锂,120,7,800V,华为ADS,领世外观设计；百变奢享空间；全景智能座舱；沉浸视听体验；华为 ADS 辅助驾驶系统；安全玄武车身；伴你开拓,https://aito.auto/model/m9-new/,aito.auto,2026-09-30T07:05:22.672760+00:00,

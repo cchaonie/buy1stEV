@@ -3,432 +3,684 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>买第一辆电车 · 车型库</title>
+    <link rel="icon" href="data:," />
+    <meta
+      name="description"
+      content="从零开始，帮你搞懂新能源车、选对第一辆车、顺利提车。"
+    />
+    <title>买第一辆电车 · 购车指南</title>
     <style>
       :root {
-        --border: #e5e7eb;
-        --muted: #6b7280;
-        --accent: #2563eb;
+        --ink: #172033;
+        --muted: #5d6677;
+        --line: #dfe5ed;
+        --paper: #fff;
+        --bg: #f4f7fb;
+        --accent: #0759bd;
+        --accent-dark: #034899;
+        --note: #edf6ff;
+        --warn: #fff8df;
+        --good: #edf9f0;
       }
       * {
         box-sizing: border-box;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         margin: 0;
-        font-family:
-          -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
-          'Microsoft YaHei', sans-serif;
-        color: #111827;
-        background: #f9fafb;
+        color: var(--ink);
+        background: var(--bg);
+        font:
+          16px/1.75 -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          'PingFang SC',
+          'Microsoft YaHei',
+          sans-serif;
       }
-      header {
-        padding: 24px 20px 12px;
-        max-width: 1200px;
+      a {
+        color: var(--accent);
+      }
+      .shell {
+        max-width: 1080px;
         margin: 0 auto;
+        padding: 0 24px 56px;
+      }
+      .hero {
+        background: linear-gradient(135deg, #083b72, #0a66c2);
+        color: #fff;
+        padding: 54px 0 42px;
+      }
+      .hero .shell {
+        padding-bottom: 0;
+      }
+      .eyebrow {
+        margin: 0 0 8px;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        opacity: 0.8;
       }
       h1 {
-        font-size: 22px;
-        margin: 0 0 4px;
+        margin: 0;
+        font-size: clamp(32px, 6vw, 52px);
+        line-height: 1.15;
       }
-      .sub {
-        color: var(--muted);
-        font-size: 13px;
+      .lede {
+        max-width: 670px;
+        margin: 15px 0 0;
+        font-size: 19px;
+        opacity: 0.94;
       }
-      .controls {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 8px 20px 16px;
+      .actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
+        gap: 12px;
+        margin-top: 25px;
       }
-      .controls input,
-      .controls select {
-        padding: 7px 10px;
-        border: 1px solid var(--border);
+      .button {
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.6);
         border-radius: 8px;
-        font-size: 14px;
+        padding: 8px 14px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .button.primary {
+        color: #073d79;
         background: #fff;
+        border-color: #fff;
       }
-      .controls input {
-        flex: 1;
-        min-width: 200px;
+      .layout {
+        display: grid;
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 26px;
+        align-items: start;
+        margin-top: 28px;
       }
-      .count {
+      nav {
+        position: sticky;
+        top: 16px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px;
+      }
+      nav strong {
+        display: block;
+        margin: 0 0 6px;
+        font-size: 14px;
+      }
+      nav a {
+        display: block;
+        padding: 4px 6px;
+        border-radius: 5px;
         color: var(--muted);
-        font-size: 13px;
+        font-size: 14px;
+        text-decoration: none;
       }
-      main {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px 40px;
+      nav a:hover {
+        color: var(--accent);
+        background: #f0f6ff;
+      }
+      article {
+        min-width: 0;
+      }
+      section {
+        margin: 0 0 22px;
+        padding: 28px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+      }
+      h2 {
+        margin: 0 0 15px;
+        font-size: 27px;
+        line-height: 1.35;
+      }
+      h3 {
+        margin: 25px 0 9px;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+      h4 {
+        margin: 20px 0 7px;
+        font-size: 17px;
+      }
+      p,
+      ul,
+      ol {
+        margin: 9px 0;
+      }
+      ul,
+      ol {
+        padding-left: 1.45em;
+      }
+      li + li {
+        margin-top: 5px;
+      }
+      strong {
+        font-weight: 700;
+      }
+      .callout {
+        margin: 18px 0;
+        padding: 13px 15px;
+        border-left: 4px solid #3f86d8;
+        border-radius: 7px;
+        background: var(--note);
+      }
+      .warn {
+        border-color: #d79900;
+        background: var(--warn);
+      }
+      .good {
+        border-color: #2e9a55;
+        background: var(--good);
+      }
+      .formula {
+        padding: 13px 15px;
+        border-radius: 7px;
+        background: #f2f5f8;
+        font-weight: 600;
       }
       .table-wrap {
         overflow-x: auto;
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: 10px;
+        margin: 15px 0;
       }
       table {
-        border-collapse: collapse;
         width: 100%;
-        font-size: 13.5px;
+        min-width: 600px;
+        border-collapse: collapse;
+        font-size: 14px;
       }
       th,
       td {
-        padding: 9px 12px;
+        padding: 9px 10px;
+        border: 1px solid var(--line);
         text-align: left;
-        border-bottom: 1px solid var(--border);
-        white-space: nowrap;
+        vertical-align: top;
       }
       th {
-        background: #f3f4f6;
-        font-weight: 600;
-        cursor: default;
-        position: sticky;
-        top: 0;
+        background: #f2f5f8;
       }
-      th.sortable {
-        cursor: pointer;
-      }
-      th.sortable:hover {
-        color: var(--accent);
-      }
-      td.hl {
-        white-space: normal;
-        max-width: 260px;
-        color: #374151;
-        vertical-align: top;
-      }
-      td.hl .hl-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        line-height: 1.5;
-        min-height: 4.5em;
-      }
-      td.hl.expanded .hl-text {
-        display: block;
-        overflow: visible;
-      }
-      td.hl .hl-toggle {
-        display: none;
-        margin-top: 2px;
-        padding: 0;
-        border: 0;
-        background: none;
-        color: var(--accent);
-        font-size: 12px;
-        line-height: 1.2;
-        cursor: pointer;
-      }
-      td.hl .hl-toggle.show {
-        display: inline-block;
-      }
-      td.adas {
-        width: 220px;
-        min-width: 220px;
-        max-width: 220px;
-        white-space: normal;
-        color: #374151;
-        vertical-align: top;
-      }
-      td.adas .adas-text {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        line-height: 1.5;
-      }
-      td.adas.expanded .adas-text {
-        display: block;
-        overflow: visible;
-      }
-      td.adas .adas-toggle {
-        display: none;
-        margin-top: 2px;
-        padding: 0;
-        border: 0;
-        background: none;
-        color: var(--accent);
-        font-size: 12px;
-        line-height: 1.2;
-        cursor: pointer;
-      }
-      td.adas .adas-toggle.show {
-        display: inline-block;
-      }
-      td a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      td.num {
-        font-variant-numeric: tabular-nums;
-      }
-      td.logo {
-        width: 44px;
-      }
-      td.logo img {
-        height: 22px;
-        width: auto;
-        max-width: 36px;
-        object-fit: contain;
-        display: block;
-      }
-      .empty {
+      .source {
         color: var(--muted);
+        font-size: 13px;
       }
       footer {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px 40px;
         color: var(--muted);
-        font-size: 12px;
+        font-size: 13px;
+        text-align: center;
+      }
+      @media (max-width: 800px) {
+        .shell {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        .layout {
+          display: block;
+        }
+        nav {
+          position: static;
+          margin-bottom: 18px;
+        }
+        nav a {
+          display: inline-block;
+        }
+        section {
+          padding: 21px 17px;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>买第一辆电车 · 车型库</h1>
-      <div class="sub">
-        数据由脚本自动抓取自各品牌官方源，仅供参考，以官方最新发布为准。
+    <header class="hero">
+      <div class="shell">
+        <p class="eyebrow">First EV guide</p>
+        <h1>🚗 买第一辆电车</h1>
+        <p class="lede">从零开始，帮你搞懂新能源车、选对第一辆车、顺利提车。</p>
+        <div class="actions">
+          <a class="button primary" href="models.html">打开在线车型库</a
+          ><a class="button" href="#start">开始阅读</a>
+        </div>
       </div>
     </header>
-
-    <div class="controls">
-      <input id="q" type="search" placeholder="搜索车型 / 亮点…" />
-      <select id="f-brand">
-        <option value="">全部品牌</option>
-      </select>
-      <select id="f-powertrain">
-        <option value="">全部动力类型</option>
-      </select>
-      <select id="f-category">
-        <option value="">全部类别</option>
-      </select>
-      <span class="count" id="count"></span>
-    </div>
-
-    <main>
-      <div class="table-wrap">
-        <table id="tbl">
-          <thead>
-            <tr>
-              <th data-k="logo">图标</th>
-              <th data-k="brand">品牌</th>
-              <th data-k="model">车型</th>
-              <th data-k="powertrain">动力类型</th>
-              <th data-k="category">类别</th>
-              <th data-k="price_min" class="sortable">价格区间</th>
-              <th data-k="range_cltc_km" class="sortable">续航(CLTC)</th>
-              <th data-k="battery_type">电池类型</th>
-              <th data-k="battery_kwh" class="sortable">电量(kWh)</th>
-              <th data-k="adas">智驾</th>
-              <th data-k="highlights">定位亮点</th>
-              <th data-k="url">链接</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
+    <main class="shell layout" id="start">
+      <nav aria-label="章节目录">
+        <strong>目录</strong>
+        <a href="#thinking">0. 思考买第一辆电车</a
+        ><a href="#basics">1. 电车基础</a><a href="#charging">2. 充电与续航</a
+        ><a href="#safety">3. 安全</a><a href="#choose">4. 如何选择</a
+        ><a href="#brands">5. 品牌与车型</a
+        ><a href="#process">6. 购车流程与避坑</a><a href="#faq">7. 常见问题</a>
+      </nav>
+      <article>
+        <section id="thinking">
+          <h2>🧠 0. 思考买第一辆电车</h2>
+          <p>
+            买第一辆电车，不是在“最好的一辆车”里挑答案，而是在自己的生活、预算和风险边界内，找到<strong>最适合的一组取舍</strong>。把它当成一个有顺序的决策问题，能避免先被外观、热度或配置表带着走。
+          </p>
+          <h3>一张决策地图：先排除不合适，再比较更合适</h3>
+          <ol>
+            <li>
+              <strong>理解工具：</strong>弄清纯电、插混、增程分别解决什么问题。
+            </li>
+            <li>
+              <strong>判断补能是否可行：</strong
+              >把充电地点、频率、时间与长途需求放进真实生活。
+            </li>
+            <li>
+              <strong>设定安全底线：</strong
+              >从主动安全、碰撞保护、三电安全和日常使用四层确认。
+            </li>
+            <li>
+              <strong>把生活翻译成约束：</strong
+              >明确总预算、乘员与装载、通勤与长途比例、补能条件。
+            </li>
+            <li>
+              <strong>在候选中比较：</strong>筛到 2–3 款，再比较参数和试驾体验。
+            </li>
+            <li>
+              <strong>把选择落到交易：</strong
+              >用落地价和持有成本比较，把权益与交付条件写入合同。
+            </li>
+            <li>
+              <strong>为长期使用校验决定：</strong
+              >理解电池衰减、无家充使用等高频问题。
+            </li>
+          </ol>
+          <h3>三个原则</h3>
+          <ul>
+            <li>
+              <strong>先看硬约束，后看软偏好：</strong
+              >安全、预算、补能和空间不满足时，其他优点不构成理由。
+            </li>
+            <li>
+              <strong>比较总体验，而不是孤立参数：</strong
+              >续航连同补能便利度看，车价连同保险、补能、金融和折旧看。
+            </li>
+            <li>
+              <strong>留下可验证依据：</strong
+              >公开测试、质保条款、实际报价与合同、真实试驾和本地补能条件，比宣传语更重要。
+            </li>
+          </ul>
+          <h3>把框架变成购车输入表</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>项目</th>
+                  <th>要写下的事实</th>
+                  <th>如何用于筛选</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>全款落地上限</td>
+                  <td>是否含保险、上牌与家充改造</td>
+                  <td>超过上限即淘汰</td>
+                </tr>
+                <tr>
+                  <td>每周通勤与最长单程</td>
+                  <td>工作日总里程、单程最长距离</td>
+                  <td>估算充电频率与续航冗余</td>
+                </tr>
+                <tr>
+                  <td>年度最长自驾</td>
+                  <td>路线、季节、里程、是否满载</td>
+                  <td>判断快充、补能网络和动力形式</td>
+                </tr>
+                <tr>
+                  <td>固定补能点</td>
+                  <td>小区、公司与 3 km 内快充站</td>
+                  <td>判断无家充是否可接受</td>
+                </tr>
+                <tr>
+                  <td>常见乘员与物品</td>
+                  <td>后排人数、安全座椅、婴儿车或行李</td>
+                  <td>排除空间或装载不够的车型</td>
+                </tr>
+                <tr>
+                  <td>计划持有期</td>
+                  <td>例如 3 年、5 年或 8 年</td>
+                  <td>决定质保、折旧和换代权重</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout good">
+            <strong>本章完成标准：</strong>填完表格，明确至少 3
+            条不可妥协条件，并据此排除至少一种不适合自己的动力形式或车身类型。
+          </div>
+        </section>
+        <section id="basics">
+          <h2>📖 1. 电车基础</h2>
+          <h3>车是干什么的</h3>
+          <p>
+            任何一辆车，本质只做三件事：<strong
+              >把人和东西从 A 运到 B、装得下、安全到达</strong
+            >。车需要能量，以及把能量变成运动的装置。油车把汽油的化学能交给发动机；电车把电能存入电池，再由电机驱动车轮。
+          </p>
+          <h3>为什么电车更高效、安静、加速快</h3>
+          <ul>
+            <li>
+              <strong>油车：</strong>汽油燃烧 → 热能 → 活塞 → 曲轴 →
+              车轮；大部分能量以热量散失，约 20%–30% 变成动能。
+            </li>
+            <li>
+              <strong>电车：</strong>电池放电 → 电机转动 → 车轮；电机效率可达 90%
+              以上，运动部件少、安静平顺，通电即有最大扭矩。
+            </li>
+          </ul>
+          <h3>主流类型：按能量怎么补充来分</h3>
+          <ul>
+            <li><strong>纯电（BEV）：</strong>只有电池，只能充电补能。</li>
+            <li>
+              <strong>插混（PHEV）：</strong>电池 + 发动机，短途用电、长途用油。
+            </li>
+            <li>
+              <strong>增程（EREV）：</strong>电池 +
+              发动机，通常以电机驱动车轮，发动机主要用于发电；具体结构以车型官方资料为准。
+            </li>
+            <li>
+              <strong>氢能（FCEV）：</strong
+              >用氢发电，但加氢站少，普通人目前基本不用考虑。
+            </li>
+          </ul>
+          <h3>三电系统</h3>
+          <p>
+            <strong>电池</strong
+            >像油箱，存电并影响续航；<strong>电机</strong>像发动机，把电变成运动；<strong>电控</strong>像大脑，管理电池与电机协作、能耗与安全。
+          </p>
+          <div class="callout">
+            从能量转化效率可推出三件事：<strong>电比油便宜、充电比加油慢、电池会衰减</strong>。后面的算账、续航和选车，都是这些事实的权衡。
+          </div>
+        </section>
+        <section id="charging">
+          <h2>🔌 2. 充电与续航</h2>
+          <h3>续航与充电，本质都是能量</h3>
+          <p>
+            电池容量用“度”（kWh）衡量；电耗是每 100 km 消耗多少度。<span
+              class="formula"
+              >续航 = 电池容量 ÷ 每公里电耗</span
+            >
+            例如 60 度电池、百公里 14 度电，理论约 430 km。
+          </p>
+          <h3>充电为什么比加油慢</h3>
+          <p>
+            充电功率
+            <strong>P = 电压 V × 电流 I</strong
+            >。电池在低电量时可较快充入，高电量时必须变慢以控制发热和电池损伤。因此快充的“半小时到
+            80%”并不代表最后 20% 也同样快。
+          </p>
+          <ul>
+            <li><strong>家充桩：</strong>约 7 kW，60 度电池充满约 8–9 小时。</li>
+            <li><strong>公共慢充：</strong>约 3–7 kW，适合边办事边充。</li>
+            <li>
+              <strong>公共快充：</strong>约 60–480 kW，常以补到 80% 的时间衡量。
+            </li>
+            <li><strong>换电：</strong>直接换满电电池，当前主要是蔚来。</li>
+          </ul>
+          <h3>800V 与 400V</h3>
+          <p>
+            相同功率下，800V
+            可用更低电流；发热约为电流平方乘电阻（I²R），所以更容易维持高速充电。纯城市代步的
+            400V 完全够用；高频长途、在意补能效率才值得重点比较 800V。
+          </p>
+          <h3>费用与续航判断</h3>
+          <p>
+            示例：百公里 13 度、家充 0.5 元/度，约 6.5 元；7 L/100km、油价 8 元/L
+            的油车约 56
+            元。全用公共快充时优势会收窄。标称续航会受高速、温度、空调、载重和路况影响，<strong>不要套用固定折扣</strong>，应以目标车型、自己的场景实测电耗核算余量。
+          </p>
+          <h3>补能可行性核验</h3>
+          <ol>
+            <li>
+              查住处、公司和常去商圈 3 km
+              内快充站的枪数、开放时段、停车费和常见价格。
+            </li>
+            <li>按实际通勤路线模拟一次专程充电，记录绕路、排队与总时间。</li>
+            <li>按城市/高速、冬季/满载等场景，用可用电量与实测电耗分别估算。</li>
+            <li>
+              无家充时，估算每周专程补能次数；若每周超过 2
+              次，再把插混、增程与纯电的总成本和时间成本并列比较。
+            </li>
+          </ol>
+          <div class="callout warn">
+            “家充 0.5 元/度”“公共快充 1.5 元/度”“半小时到
+            80%”只是示例量级，以当地电价、目标站点与目标车型实际表现为准。
+          </div>
+        </section>
+        <section id="safety">
+          <h2>🛡️ 3. 安全</h2>
+          <p>
+            安全不是“配置表上有没有”，而是能否避免事故、碰撞时保护乘员，以及让电池和补能使用处于合理风险内。
+          </p>
+          <h3>四层框架</h3>
+          <ol>
+            <li>
+              <strong>主动安全：</strong>AEB
+              的识别对象与工作范围、车道辅助、盲区/开门预警、自适应巡航；辅助驾驶不替代驾驶员。
+            </li>
+            <li>
+              <strong>被动安全：</strong
+              >优先看目标年款、具体配置对应的公开碰撞测试；核对气囊、侧气帘、ISOFIX、后排安全带提醒与坐姿。
+            </li>
+            <li>
+              <strong>电池与高压安全：</strong
+              >看电池类型、三电与整车质保、涉水/碰撞检修要求、当地售后与救援能力。严重托底、碰撞、异味、冒烟或高压故障提示时，立即停车、远离车辆并联系救援/消防。
+            </li>
+            <li>
+              <strong>日常使用：</strong
+              >使用合规桩和线缆；发现发热、破损、进水即停止充电；不私改高压系统。
+            </li>
+          </ol>
+          <h3>试驾与下单前清单</h3>
+          <ul>
+            <li>查询目标车型和配置的公开碰撞测试、召回与安全公告。</li>
+            <li>
+              核对 AEB、盲区监测、侧气帘、后排安全带提醒、ISOFIX
+              是否为目标配置标配。
+            </li>
+            <li>确认保险方案、事故救援、附近售后网点与三电质保关键条件。</li>
+            <li>
+              提车时检查轮胎、胎压、刹车、灯光、雨刮、警示牌和充电设备，保留交付文件。
+            </li>
+          </ul>
+          <div class="callout warn">
+            任何辅助驾驶功能都不替代驾驶员。雨雾、逆光、施工路段、复杂路口和异形障碍物都可能降低识别与辅助效果。
+          </div>
+        </section>
+        <section id="choose">
+          <h2>🧭 4. 如何选择</h2>
+          <h3>正确顺序：先定约束，再谈喜好</h3>
+          <ol>
+            <li><strong>预算：</strong>落地总价，含保险与充电桩。</li>
+            <li><strong>用途：</strong>载几人、每天多远、城市还是长途。</li>
+            <li><strong>补能：</strong>有没有家充；它通常比预算更关键。</li>
+          </ol>
+          <h3>不要被单一技术名词带偏</h3>
+          <p>
+            LFP 与三元锂的材料特性、800V 与 400V
+            的补能能力都只是系统的一部分。对同一预算和具体版本，更应比较<strong>可用续航、低温表现、质保、常用充电桩补能表现与实际价差</strong>。智能驾驶当前仍是辅助，驾驶责任始终在驾驶者。
+          </p>
+          <h3>用淘汰项与评分项筛车</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>维度</th>
+                  <th>记录方式</th>
+                  <th>是否淘汰项</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>预算</td>
+                  <td>全款落地与贷款总成本是否在上限内</td>
+                  <td>是</td>
+                </tr>
+                <tr>
+                  <td>补能</td>
+                  <td>固定补能点、每周专程充电次数、长途路线</td>
+                  <td>是</td>
+                </tr>
+                <tr>
+                  <td>空间</td>
+                  <td>后排、安全座椅、后备厢实装</td>
+                  <td>是</td>
+                </tr>
+                <tr>
+                  <td>安全</td>
+                  <td>公开测试、目标配置和质保资料</td>
+                  <td>是</td>
+                </tr>
+                <tr>
+                  <td>长途</td>
+                  <td>补能、停留时间、冬季/满载余量</td>
+                  <td>是</td>
+                </tr>
+                <tr>
+                  <td>停车、舒适、车机</td>
+                  <td>试驾后按 1–5 分评分并写观察事实</td>
+                  <td>否</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section id="brands">
+          <h2>🏷️ 5. 品牌与车型</h2>
+          <p>
+            品牌定位只用于形成候选池，不能替代车型级判断。可以把品牌看作在解决电车的哪个根本问题：
+          </p>
+          <ul>
+            <li><strong>比亚迪：</strong>成本与规模。</li>
+            <li><strong>特斯拉：</strong>能效与软件。</li>
+            <li><strong>蔚来：</strong>补能慢（换电网络）。</li>
+            <li><strong>小鹏：</strong>智能驾驶与年轻科技。</li>
+            <li><strong>理想：</strong>里程焦虑与家庭空间。</li>
+            <li><strong>问界：</strong>智能座舱与辅助驾驶体验。</li>
+            <li><strong>小米：</strong>生态与性能。</li>
+            <li><strong>极氪：</strong>驾驶质感、底盘与性能。</li>
+          </ul>
+          <p>
+            用车型库先按<strong>价格区间、动力类型、车身类别</strong>筛到 2–3
+            款，再比较续航、电池、辅助驾驶和真实试驾体验。对每个候选固定比较：全款落地价、贷款总成本、可用续航、常用桩补能、尺寸与实装、当地门店维修、整车/三电质保、保险与交付周期。
+          </p>
+          <div class="callout warn">
+            在线车型库适合参数初筛；价格、权益、保险、交付周期及地方补贴必须以当地门店书面报价、官方规则和合同为准。
+          </div>
+        </section>
+        <section id="process">
+          <h2>📋 6. 购车流程与避坑</h2>
+          <p>购车是一套从试驾验证、方案比较到签约和交付验收的连续决策。</p>
+          <h3>完整流程</h3>
+          <ol>
+            <li>定约束：预算、用途、补能。</li>
+            <li>线上筛 2–3 款候选并固定对比配置。</li>
+            <li>到店试驾，验证空间、座椅、车机和驾驶感。</li>
+            <li>拿完整报价：落地价、金融、置换、赠品和交付条件。</li>
+            <li>签合同、等车、验车，把配置、权益与交付日期写清。</li>
+            <li>上牌、保险、充电桩，开始用车。</li>
+          </ol>
+          <h3>6.1 到店与试驾：验证真实体验</h3>
+          <p>
+            每次只重点比较 1–2
+            款，用同一套评分表记录空间/座椅、视野/停车、驾驶舒适、车机、补能与总成本。带真实的儿童座椅、婴儿车或行李；提前预约能覆盖拥堵、快速路、窄路、地库等真实场景的路线。
+          </p>
+          <ul>
+            <li>
+              <strong>静态：</strong>调整座椅方向盘，观察 A
+              柱和后视镜盲区；实测后排、储物、后备厢、充电口和常用手机互联。
+            </li>
+            <li>
+              <strong>动态：</strong
+              >体验低速跟车、动能回收、减速带、粗糙路、变道噪声、掉头、停车及影像/雷达；辅助驾驶先问清适用道路、退出方式与责任。
+            </li>
+            <li>
+              <strong>信息：</strong
+              >分清配置表上的事实、写进订单的承诺与展车演示；展车或高配试驾车不等于要买的版本。
+            </li>
+            <li>
+              <strong>离店复盘：</strong
+              >马上记录版本、道路和天气、优缺点、总分、书面报价与交付信息；分数接近时专门安排第二次试驾复验纠结场景。
+            </li>
+          </ul>
+          <h3>6.2 报价、贷款与总成本</h3>
+          <p>
+            真实花费由<strong>车价、税费、保险、补能、保养、折旧</strong>组成。用下面口径比较方案：
+          </p>
+          <p class="formula">
+            三年总持有成本 = 落地一次性支出 + 三年保险 + 三年补能 + 保养/易耗品 +
+            融资成本 − 三年后的预计残值
+          </p>
+          <ul>
+            <li>
+              一次性项目拆开：成交价、选装、保险、上牌、金融/置换、家充安装。
+            </li>
+            <li>持续项目拆开：家充/公共补能、续保、易耗品、事故与折旧。</li>
+            <li>
+              分别要求全款与贷款方案：贷款本金、期数、月供、总还款、总利息、服务/GPS/抵押/保险捆绑、提前还款规则。
+            </li>
+            <li>
+              不比较“综合优惠”“低首付”“日供”；只比较最终总支出。赠品按真实市场价估值，口头承诺不能替代订单或补充协议。
+            </li>
+          </ul>
+          <h3>6.3 签约、提车与权益验收</h3>
+          <ul>
+            <li>
+              <strong>合同前：</strong
+              >核对年款、配置、驱动、电池与辅助驾驶权益；写清开票价、补贴资格/到账/差额、贷款总成本、交付日期和延期处理。
+            </li>
+            <li>
+              <strong>提车日：</strong>核对
+              VIN、合格证、发票、保险和订单；检查生产日期、里程、漆面、玻璃、轮胎、充电口、工具、选装与赠品。
+            </li>
+            <li>
+              <strong>异常处理：</strong
+              >先拍照录像并写在交付单上，获得书面处理方案、时限和责任人后再签交接；不要签“车辆无异常”类声明。
+            </li>
+            <li>
+              <strong>权益：</strong
+              >核对整车/三电/易损件质保、首任车主限制、充电权益有效期与服务费，以及辅助驾驶是随车、买断还是订阅。
+            </li>
+          </ul>
+          <h3>6.4 保值、避坑与购车时机</h3>
+          <p>
+            电车折旧通常受电池衰减、技术迭代和价格战影响；它的主要价值在用车成本，不是理财。购车前看目标配置的质保、交付条款、价格保护与权益锁定范围；补贴、购置税和地方政策以<strong>下订与开票前</strong>官方当期规则为准。只有当前车型、配置、补贴资格、交付日期和总成本都满足上限时再买，不为未承诺的降价无限等待。
+          </p>
+          <div class="callout warn">
+            车展、季度末、年底可能有促销，但不构成必然降价规律。使用当前书面总价、合同与自己的预算做决定。
+          </div>
+        </section>
+        <section id="faq">
+          <h2>❓ 7. 常见问题</h2>
+          <h3>第一辆车该买纯电吗？</h3>
+          <p>
+            没有标准答案，取决于约束。有家充且主要城市代步，纯电通常值得优先进入候选；无家充或经常长途时，不要直接排除纯电，先按补能核验与时间成本决定是否把插混/增程作为优先候选。
+          </p>
+          <h3>没有家充能买纯电吗？</h3>
+          <p>
+            能，但要算时间成本：是否有稳定且不绕路的固定快充点？每周一两次专程补能能否接受？常跑长途时，沿途网络与停留时间是否能接受？三项中两项为“否”，就把插混或增程与纯电在同一张总成本和时间成本表里重点比较。
+          </p>
+          <h3>电池会衰减吗？</h3>
+          <p>
+            会，但主流电池通常有 8 年或 12–16 万 km
+            质保。避免车辆长期满电或极低电量、长期高温暴晒；长途前可按需充满，日常充电上限、长期停放和低温充电以目标车型手册与车机提示为准。若车企要求定期充至
+            100% 校准，应优先遵循车型要求。
+          </p>
+        </section>
+      </article>
     </main>
-
-    <footer id="foot"></footer>
-
-    <script>
-      const PRICE_LABEL = p =>
-        p == null
-          ? ''
-          : p >= 10000
-            ? (p / 10000).toFixed(p % 10000 ? 2 : 1).replace(/\.0$/, '') + '万'
-            : p + '元';
-      const fmtPrice = (lo, hi) =>
-        lo == null && hi == null
-          ? ''
-          : PRICE_LABEL(lo) + (hi && hi !== lo ? ' – ' + PRICE_LABEL(hi) : '');
-      const fmtRange = v => (v == null || v === '' ? '' : v + ' km');
-      const fmtKwh = v => (v == null || v === '' ? '' : v);
-      const LOGOS = {
-        比亚迪: 'logos/byd.svg',
-        小米: 'logos/xiaomi.svg',
-        特斯拉: 'logos/tesla.svg',
-        蔚来: 'logos/nio.png',
-        小鹏: 'logos/xpeng.png',
-        理想: 'logos/lixiang.png',
-        极氪: 'logos/zeekr.png',
-        问界: 'logos/aito.svg',
-      };
-
-      let data = [];
-      let sortKey = null,
-        sortDir = 1;
-
-      function uniq(field) {
-        return [...new Set(data.map(r => r[field]).filter(Boolean))].sort(
-          (a, b) => a.localeCompare(b, 'zh'),
-        );
-      }
-      function populateFilters() {
-        const fill = (sel, field) => {
-          const el = document.getElementById(sel);
-          uniq(field).forEach(v => {
-            const o = document.createElement('option');
-            o.value = v;
-            o.textContent = v;
-            el.appendChild(o);
-          });
-        };
-        fill('f-brand', 'brand');
-        fill('f-powertrain', 'powertrain');
-        fill('f-category', 'category');
-      }
-
-      function matches(r) {
-        const q = document.getElementById('q').value.trim().toLowerCase();
-        const b = document.getElementById('f-brand').value;
-        const p = document.getElementById('f-powertrain').value;
-        const c = document.getElementById('f-category').value;
-        if (b && r.brand !== b) return false;
-        if (p && r.powertrain !== p) return false;
-        if (c && r.category !== c) return false;
-        if (
-          q &&
-          !(r.model + ' ' + (r.highlights || '')).toLowerCase().includes(q)
-        )
-          return false;
-        return true;
-      }
-
-      function render() {
-        let rows = data.filter(matches);
-        if (sortKey)
-          rows.sort((a, b) => {
-            const av = a[sortKey],
-              bv = b[sortKey];
-            if (av === bv) return 0;
-            if (av == null || av === '') return 1;
-            if (bv == null || bv === '') return -1;
-            return (av > bv ? 1 : -1) * sortDir;
-          });
-        const tbody = document.querySelector('#tbl tbody');
-        tbody.innerHTML = '';
-        rows.forEach(r => {
-          const tr = document.createElement('tr');
-          const icon = document.createElement('td');
-          icon.className = 'logo';
-          const logo = LOGOS[r.brand];
-          if (logo) {
-            const img = document.createElement('img');
-            img.src = logo;
-            img.alt = r.brand;
-            img.loading = 'lazy';
-            icon.appendChild(img);
-          }
-          tr.appendChild(icon);
-          const cells = [
-            r.brand,
-            r.model,
-            r.powertrain,
-            r.category,
-            fmtPrice(r.price_min, r.price_max),
-            fmtRange(r.range_cltc_km),
-            r.battery_type,
-            fmtKwh(r.battery_kwh),
-            r.adas,
-          ];
-          cells.forEach((v, i) => {
-            const td = document.createElement('td');
-            if (i === 8) {
-              td.className = 'adas';
-              const adasText = document.createElement('span');
-              adasText.className = 'adas-text';
-              adasText.textContent = v == null ? '' : v;
-              td.appendChild(adasText);
-              const adasToggle = document.createElement('button');
-              adasToggle.type = 'button';
-              adasToggle.className = 'adas-toggle';
-              adasToggle.textContent = '查看更多';
-              adasToggle.addEventListener('click', () => {
-                const expanded = td.classList.toggle('expanded');
-                adasToggle.textContent = expanded ? '收起' : '查看更多';
-              });
-              td.appendChild(adasToggle);
-            } else {
-              td.textContent = v == null ? '' : v;
-              if (i === 4 || i === 5 || i === 7) td.className = 'num';
-            }
-            tr.appendChild(td);
-          });
-          const hl = document.createElement('td');
-          hl.className = 'hl';
-          const hlText = document.createElement('span');
-          hlText.className = 'hl-text';
-          hlText.textContent = r.highlights || '';
-          hl.appendChild(hlText);
-          const hlToggle = document.createElement('button');
-          hlToggle.type = 'button';
-          hlToggle.className = 'hl-toggle';
-          hlToggle.textContent = '查看更多';
-          hlToggle.addEventListener('click', () => {
-            const expanded = hl.classList.toggle('expanded');
-            hlToggle.textContent = expanded ? '收起' : '查看更多';
-          });
-          hl.appendChild(hlToggle);
-          tr.appendChild(hl);
-          const link = document.createElement('td');
-          if (r.url) {
-            const a = document.createElement('a');
-            a.href = r.url;
-            a.target = '_blank';
-            a.textContent = '查看';
-            link.appendChild(a);
-          }
-          tr.appendChild(link);
-          tbody.appendChild(tr);
-        });
-        tbody.querySelectorAll('td.hl, td.adas').forEach(td => {
-          const t = td.querySelector('.hl-text, .adas-text');
-          const btn = td.querySelector('.hl-toggle, .adas-toggle');
-          if (t.scrollHeight > t.clientHeight + 1) btn.classList.add('show');
-        });
-        document.getElementById('count').textContent =
-          `${rows.length} / ${data.length} 款`;
-      }
-
-      document.querySelectorAll('th.sortable').forEach(th => {
-        th.addEventListener('click', () => {
-          const k = th.dataset.k;
-          if (sortKey === k) sortDir = -sortDir;
-          else {
-            sortKey = k;
-            sortDir = 1;
-          }
-          render();
-        });
-      });
-      ['q', 'f-brand', 'f-powertrain', 'f-category'].forEach(id =>
-        document.getElementById(id).addEventListener('input', render),
-      );
-
-      fetch('data.json')
-        .then(r => r.json())
-        .then(rows => {
-          data = rows;
-          populateFilters();
-          render();
-          const latest = rows
-            .map(r => r.fetched_at)
-            .filter(Boolean)
-            .sort()
-            .slice(-1)[0];
-          document.getElementById('foot').textContent =
-            `共 ${rows.length} 款车型 · 数据来源：各品牌官方接口 · 最近采集：${latest || '—'} · 由脚本自动生成`;
-        })
-        .catch(e => {
-          document.getElementById('count').textContent = '加载失败：' + e;
-        });
-    </script>
+    <footer class="shell">
+      <p>
+        本页为 Notion 文档“买第一辆电车”的静态发布快照，更新于
+        2026-10-01。内容仅供参考；购车请以目标车型官方资料、当地规则和合同为准。
+      </p>
+    </footer>
   </body>
 </html>

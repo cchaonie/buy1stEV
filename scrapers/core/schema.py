@@ -18,6 +18,7 @@ FIELDS = [
     "url",
     "source",
     "fetched_at",
+    "recall_history",
 ]
 
 LABELS = {
@@ -38,6 +39,7 @@ LABELS = {
     "url": "参考链接",
     "source": "来源",
     "fetched_at": "采集时间",
+    "recall_history": "召回信息",
 }
 
 PRICE_BUCKETS = [

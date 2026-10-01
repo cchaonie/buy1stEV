@@ -7,6 +7,12 @@ on:
       - 'data/**'
       - 'docs/**'
       - 'site/**'
+      - 'scrapers/recalls/**'
+      - 'scrapers/run_all.py'
+      - 'scrapers/core/records.py'
+      - 'scrapers/core/transactions.py'
+      - 'scrapers/core/schema.py'
+      - 'scrapers/core/writer.py'
   workflow_dispatch: {}
 
 permissions:
@@ -30,6 +36,9 @@ jobs:
 
       - name: Build site
         run: python site/build_site.py
+
+      - name: Validate recall audit and generated data
+        run: python -m scrapers.recalls.validate
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

@@ -6,3 +6,9 @@ __pycache__/
 
 # Old single-file scraper (superseded by scrapers/)
 scraper/
+
+# Persistent local transaction journal and lock
+.scraper-transactions/
+
+# Generated task artifacts
+.agents/

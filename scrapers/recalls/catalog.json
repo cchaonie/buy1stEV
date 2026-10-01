@@ -1,0 +1,309 @@
+{
+  "schema_version": 3,
+  "coverage": {
+    "audit_cutoff": "2026-10-01",
+    "known_gaps": [
+      "本轮仅针对当前车型库中的小米 SU7 车系核验市场监管总局可访问公告，不是市场监管总局召回栏目的全量历史遍历。",
+      "官方索引的检索与页面留存不能证明历史公告绝对完整；厂商站点也可能改版或下线旧公告。"
+    ],
+    "sources_checked": [
+      {
+        "source_id": "samr",
+        "name": "国家市场监督管理总局召回栏目",
+        "index_url": "https://www.samr.gov.cn/zw/zh/index.html",
+        "publication_searched_from": "2025-01-24",
+        "publication_searched_through": "2025-09-19",
+        "checked_on": "2026-10-01",
+        "method": "以当前车型库的小米 SU7 车系为目标，通过检索发现候选后，在真实浏览器逐篇打开市场监管总局正文并核验标题、发布日期、范围、原因和措施。",
+        "limitations": "这是针对 SU7 的定向核验区间，不代表该栏目、其他品牌或区间内所有公告均已穷举。",
+        "candidate_snapshot_id": "samr-su7-2026-10-01",
+        "candidate_snapshot_path": "scrapers/recalls/snapshots/samr-su7-2026-10-01.json",
+        "candidate_snapshot_sha256": "795622610431312c258dc062c67b7350be328b84002718baf28f21281df17a49"
+      }
+    ]
+  },
+  "investigations": [
+    {
+      "investigation_id": "inv-samr-su7-2025-01",
+      "discovered_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_589f94caf6ad48a484fcf97135ca3eb5.html",
+      "discovered_on": "2026-10-01",
+      "candidate_brand": "小米",
+      "candidate_model": "SU7",
+      "status": "verified_notice",
+      "notice_id": "samr-su7-2025-01-24",
+      "reason": "已在市场监管总局官方正文核验完整召回事实。",
+      "evidence_excerpt": "发布时间：2025-01-24 14:56；召回部分SU7标准版电动汽车。"
+    },
+    {
+      "investigation_id": "inv-samr-su7-2025-09",
+      "discovered_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_2152a981c72a430b9d10d6ef5cd9c09b.html",
+      "discovered_on": "2026-10-01",
+      "candidate_brand": "小米",
+      "candidate_model": "SU7",
+      "status": "verified_notice",
+      "notice_id": "samr-su7-2025-09-19",
+      "reason": "已在市场监管总局官方正文核验完整召回事实。",
+      "evidence_excerpt": "发布时间：2025-09-19 09:22；召回部分SU7标准版电动汽车。"
+    }
+  ],
+  "notices": [
+    {
+      "notice_id": "samr-su7-2025-01-24",
+      "event_id": "su7-parking-2025-01",
+      "source_id": "samr",
+      "issuer": "国家市场监督管理总局",
+      "title": "小米汽车科技有限公司召回部分SU7标准版 电动汽车",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_589f94caf6ad48a484fcf97135ca3eb5.html",
+      "announcement_date": "2025-01-24",
+      "recall_start_date": "2025-01-24",
+      "recall_number_provided": false,
+      "recall_number": "",
+      "scope": "2024年2月6日至2024年11月26日生产的部分SU7标准版电动汽车，共计30931台；涉及BJ7000MBEVR2、XMA7000MBEVR2和XMA7000MBEVR5车型。",
+      "reason": "软件策略问题可能导致授时同步异常，影响智能泊车辅助功能对静态障碍物的探测，增加剐蹭或碰撞风险。",
+      "remedy": "通过汽车远程升级（OTA）技术，为召回范围内车辆免费升级软件。",
+      "verified_on": "2026-10-01",
+      "coverage_date": "2025-01-24",
+      "coverage_date_basis": "announcement_date",
+      "coverage_note": "",
+      "recall_subject": "小米汽车科技有限公司",
+      "affected_series": ["SU7标准版"],
+      "production_start": "2024-02-06",
+      "production_end": "2024-11-26",
+      "fact_evidence": {
+        "announcement_date": "发布时间：2025-01-24 14:56",
+        "recall_start_date": "决定自即日起",
+        "recall_number": "",
+        "scope": "召回2024年2月6日至2024年11月26日生产的部分SU7标准版电动汽车，共计30931台（车辆型号BJ7000MBEVR2涉及车辆18410台；车辆型号XMA7000MBEVR2涉及车辆12117台；车辆型号XMA7000MBEVR5涉及车辆404台）。",
+        "reason": "因软件策略问题，可能导致授时同步异常，影响智能泊车辅助功能对静态障碍物的探测，增加剐蹭或碰撞的风险。",
+        "remedy": "将通过汽车远程升级（OTA）技术，为召回范围内的车辆免费升级软件。",
+        "coverage_date": "发布时间：2025-01-24 14:56"
+      }
+    },
+    {
+      "notice_id": "samr-su7-2025-09-19",
+      "event_id": "su7-l2-highway-2025-09",
+      "source_id": "samr",
+      "issuer": "国家市场监督管理总局",
+      "title": "小米汽车科技有限公司召回部分SU7标准版 电动汽车",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_2152a981c72a430b9d10d6ef5cd9c09b.html",
+      "announcement_date": "2025-09-19",
+      "recall_start_date": "2025-09-19",
+      "recall_number_provided": true,
+      "recall_number": "S2025M0149I、S2025M0150I",
+      "scope": "2024年2月6日至2025年8月30日生产的部分SU7标准版电动汽车，共计116887辆；涉及XMA7000MBEVR2、XMA7000MBEVR5和BJ7000MBEVR2车型。",
+      "reason": "部分车辆在L2高速领航辅助驾驶功能开启的某些情况下，对极端特殊场景的识别、预警或处置可能不足；驾驶员不及时干预可能增加碰撞风险。",
+      "remedy": "通过汽车远程升级（OTA）技术，为召回范围内车辆免费升级软件。",
+      "verified_on": "2026-10-01",
+      "coverage_date": "2025-09-19",
+      "coverage_date_basis": "announcement_date",
+      "coverage_note": "",
+      "recall_subject": "小米汽车科技有限公司",
+      "affected_series": ["SU7标准版"],
+      "production_start": "2024-02-06",
+      "production_end": "2025-08-30",
+      "fact_evidence": {
+        "announcement_date": "发布时间：2025-09-19 09:22",
+        "recall_start_date": "决定自即日起",
+        "recall_number": "召回编号S2025M0149I；召回编号S2025M0150I",
+        "scope": "召回2024年2月6日至2025年8月30日生产的部分SU7标准版电动汽车，共计116887辆。涉及XMA7000MBEVR2、XMA7000MBEVR5和BJ7000MBEVR2车型。",
+        "reason": "在L2高速领航辅助驾驶功能开启的某些情况下，对极端特殊场景的识别、预警或处置可能不足，若驾驶员不及时干预可能会增加碰撞风险。",
+        "remedy": "将通过汽车远程升级（OTA）技术，为召回范围内的车辆免费升级软件。",
+        "coverage_date": "发布时间：2025-09-19 09:22"
+      }
+    }
+  ],
+  "events": [
+    {
+      "event_id": "su7-parking-2025-01",
+      "primary_notice_id": "samr-su7-2025-01-24",
+      "notice_ids": ["samr-su7-2025-01-24"]
+    },
+    {
+      "event_id": "su7-l2-highway-2025-09",
+      "primary_notice_id": "samr-su7-2025-09-19",
+      "notice_ids": ["samr-su7-2025-09-19"]
+    }
+  ],
+  "duplicate_reviews": [
+    {
+      "review_id": "review-su7-2025-events",
+      "notice_ids": ["samr-su7-2025-01-24", "samr-su7-2025-09-19"],
+      "decision": "distinct_event",
+      "reason": "两公告虽召回主体、SU7标准版车系和生产期重叠，但缺陷分别为智能泊车静态障碍物探测与L2高速领航极端场景处置，公告日期、召回数量及措施对应的软件问题不同。"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "match-su7-parking-2025-01",
+      "event_id": "su7-parking-2025-01",
+      "brand": "小米",
+      "model": "SU7",
+      "basis_notice_ids": ["samr-su7-2025-01-24"],
+      "announcement_model_text": "SU7标准版电动汽车",
+      "notice_evidence_excerpt": "召回2024年2月6日至2024年11月26日生产的部分SU7标准版电动汽车。",
+      "match_reason": "车型库的SU7记录按车系聚合且官方车型页明确使用SU7名称；公告明确限定SU7标准版、电动汽车和生产日期。关联表示该SU7车系的历史事件，不表示当前在售新一代SU7或所有配置均受影响。",
+      "alignment": {
+        "brand": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "小米汽车科技有限公司",
+          "rationale": "公告召回主体与车型库品牌小米一致。"
+        },
+        "model_name": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "SU7标准版电动汽车",
+          "rationale": "公告车系名SU7与目标车型键SU7精确对应，标准版限制保留在范围中。"
+        },
+        "production_period": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "2024年2月6日至2024年11月26日生产",
+          "rationale": "展示范围保留公告生产期，不扩大到车系其他车辆。"
+        },
+        "generation_or_sales_period": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "2024年2月6日至2024年11月26日生产",
+          "rationale": "历史记录按公告生产期限定，不暗示当前新一代车型受影响。"
+        },
+        "powertrain_or_variant": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "SU7标准版电动汽车",
+          "rationale": "公告明确电动汽车及标准版，未扩展到Ultra。"
+        },
+        "import_domestic_status": {
+          "notice_constraint": "not_stated",
+          "status": "not_applicable",
+          "evidence_excerpt": "",
+          "rationale": "本次关联不依赖进口或国产身份，公告以生产期和车辆型号限定范围。"
+        }
+      },
+      "target_evidence": [
+        {
+          "evidence_id": "target-xiaomi-su7-page-jan",
+          "source_id": "xiaomi",
+          "issuer": "小米汽车科技有限公司",
+          "official_vehicle_url": "https://www.xiaomiev.com/su7",
+          "verified_on": "2026-10-01",
+          "supports": ["brand", "model_name", "powertrain_or_variant"],
+          "evidence_excerpt": "官方页面标题为“新一代 SU7”，版本区域列出标准版、Pro版、Max版；页脚为小米汽车科技有限公司。"
+        },
+        {
+          "evidence_id": "target-samr-su7-jan",
+          "source_id": "samr",
+          "issuer": "国家市场监督管理总局",
+          "official_vehicle_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_589f94caf6ad48a484fcf97135ca3eb5.html",
+          "verified_on": "2026-10-01",
+          "supports": [
+            "brand",
+            "model_name",
+            "production_period",
+            "generation_or_sales_period",
+            "powertrain_or_variant"
+          ],
+          "evidence_excerpt": "小米汽车科技有限公司召回2024年2月6日至2024年11月26日生产的部分SU7标准版电动汽车。"
+        }
+      ]
+    },
+    {
+      "match_id": "match-su7-l2-2025-09",
+      "event_id": "su7-l2-highway-2025-09",
+      "brand": "小米",
+      "model": "SU7",
+      "basis_notice_ids": ["samr-su7-2025-09-19"],
+      "announcement_model_text": "SU7标准版电动汽车",
+      "notice_evidence_excerpt": "召回2024年2月6日至2025年8月30日生产的部分SU7标准版电动汽车。",
+      "match_reason": "车型库的SU7记录按车系聚合且官方车型页明确使用SU7名称；公告明确限定SU7标准版、电动汽车和生产日期。关联表示该SU7车系的历史事件，不表示当前在售新一代SU7或所有配置均受影响。",
+      "alignment": {
+        "brand": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "小米汽车科技有限公司",
+          "rationale": "公告召回主体与车型库品牌小米一致。"
+        },
+        "model_name": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "SU7标准版电动汽车",
+          "rationale": "公告车系名SU7与目标车型键SU7精确对应，标准版限制保留在范围中。"
+        },
+        "production_period": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "2024年2月6日至2025年8月30日生产",
+          "rationale": "展示范围保留公告生产期，不扩大到车系其他车辆。"
+        },
+        "generation_or_sales_period": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "2024年2月6日至2025年8月30日生产",
+          "rationale": "历史记录按公告生产期限定，不暗示当前新一代车型受影响。"
+        },
+        "powertrain_or_variant": {
+          "notice_constraint": "limited",
+          "status": "confirmed",
+          "evidence_excerpt": "SU7标准版电动汽车",
+          "rationale": "公告明确电动汽车及标准版，未扩展到Ultra。"
+        },
+        "import_domestic_status": {
+          "notice_constraint": "not_stated",
+          "status": "not_applicable",
+          "evidence_excerpt": "",
+          "rationale": "本次关联不依赖进口或国产身份，公告以生产期和车辆型号限定范围。"
+        }
+      },
+      "target_evidence": [
+        {
+          "evidence_id": "target-xiaomi-su7-page-sep",
+          "source_id": "xiaomi",
+          "issuer": "小米汽车科技有限公司",
+          "official_vehicle_url": "https://www.xiaomiev.com/su7",
+          "verified_on": "2026-10-01",
+          "supports": ["brand", "model_name", "powertrain_or_variant"],
+          "evidence_excerpt": "官方页面标题为“新一代 SU7”，版本区域列出标准版、Pro版、Max版；页脚为小米汽车科技有限公司。"
+        },
+        {
+          "evidence_id": "target-samr-su7-sep",
+          "source_id": "samr",
+          "issuer": "国家市场监督管理总局",
+          "official_vehicle_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_2152a981c72a430b9d10d6ef5cd9c09b.html",
+          "verified_on": "2026-10-01",
+          "supports": [
+            "brand",
+            "model_name",
+            "production_period",
+            "generation_or_sales_period",
+            "powertrain_or_variant"
+          ],
+          "evidence_excerpt": "小米汽车科技有限公司召回2024年2月6日至2025年8月30日生产的部分SU7标准版电动汽车。"
+        }
+      ]
+    }
+  ],
+  "skips": [
+    {
+      "skip_id": "skip-su7-ultra-parking-2025-01",
+      "event_id": "su7-parking-2025-01",
+      "investigation_id": "inv-samr-su7-2025-01",
+      "candidate_brand": "小米",
+      "candidate_model": "SU7 Ultra",
+      "decision_subject": "",
+      "reason_code": "variant_unconfirmed",
+      "reason": "公告仅明确SU7标准版及三个车辆型号，不能据此确认独立车型库记录SU7 Ultra属于召回范围。",
+      "evidence_excerpt": "部分SU7标准版电动汽车；车辆型号BJ7000MBEVR2、XMA7000MBEVR2、XMA7000MBEVR5。"
+    },
+    {
+      "skip_id": "skip-su7-ultra-l2-2025-09",
+      "event_id": "su7-l2-highway-2025-09",
+      "investigation_id": "inv-samr-su7-2025-09",
+      "candidate_brand": "小米",
+      "candidate_model": "SU7 Ultra",
+      "decision_subject": "",
+      "reason_code": "variant_unconfirmed",
+      "reason": "公告仅明确SU7标准版及三个车辆型号，不能据此确认独立车型库记录SU7 Ultra属于召回范围。",
+      "evidence_excerpt": "部分SU7标准版电动汽车；涉及XMA7000MBEVR2、XMA7000MBEVR5和BJ7000MBEVR2车型。"
+    }
+  ]
+}

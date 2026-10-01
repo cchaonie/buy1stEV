@@ -223,5 +223,5 @@ def fetch():
 
 
 if __name__ == "__main__":
-    from ..core.writer import write_brand
-    write_brand("zeekr", fetch())
+    from ..run_all import refresh_brand
+    refresh_brand("zeekr")

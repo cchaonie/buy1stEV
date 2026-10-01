@@ -13,10 +13,11 @@
     "ac_charge_kw": "",
     "charging_platform": "400V",
     "adas": "基础辅助驾驶（HW4.0）",
-    "highlights": "Performance 高性能全轮驱动版：CLTC 670km，0-100km/h 3.1秒，全轮驱动；后轮驱动版：CLTC 634km，0-100km/h 6.1秒，后轮驱动；长续航后轮驱动版：CLTC 830km，0-100km/h 5.2秒，后轮驱动；长续航全轮驱动版：CLTC 753km，0-100km/h 3.8秒，全轮驱动；最高充电功率250kW",
+    "highlights": "后轮驱动版：CLTC 634km，0-100km/h 6.1秒，后轮驱动；长续航后轮驱动版：CLTC 830km，0-100km/h 5.2秒，后轮驱动；长续航全轮驱动版：CLTC 753km，0-100km/h 3.8秒，全轮驱动；Performance 高性能全轮驱动版：CLTC 647km，0-100km/h 3.1秒，全轮驱动；最高充电功率250kW",
     "url": "https://www.tesla.cn/model3/design",
     "source": "tesla.cn",
-    "fetched_at": "2026-10-01T07:29:29.334844+00:00"
+    "fetched_at": "2026-09-30T07:04:32.047162+00:00",
+    "recall_history": ""
   },
   {
     "brand": "特斯拉",
@@ -32,9 +33,10 @@
     "ac_charge_kw": "",
     "charging_platform": "400V",
     "adas": "基础辅助驾驶（HW4.0）",
-    "highlights": "后轮驱动版：CLTC 593km，0-100km/h 5.9秒，后轮驱动；长续航全轮驱动版：CLTC 750km，0-100km/h 4.3秒，全轮驱动；长续航后轮驱动版：CLTC 821km，0-100km/h 5.6秒，后轮驱动；L：CLTC 776km，0-100km/h 4.5秒，六座；Performance 高性能全轮驱动版：CLTC 659km，0-100km/h 3.5秒，全轮驱动；最高充电功率250kW",
+    "highlights": "L：CLTC 751km，0-100km/h 4.5秒，六座；后轮驱动版：CLTC 593km，0-100km/h 5.9秒，后轮驱动；长续航全轮驱动版：CLTC 750km，0-100km/h 4.3秒，全轮驱动；长续航后轮驱动版：CLTC 821km，0-100km/h 5.6秒，后轮驱动；Performance 高性能全轮驱动版：CLTC 659km，0-100km/h 3.5秒，全轮驱动；最高充电功率250kW",
     "url": "https://www.tesla.cn/modely/design",
     "source": "tesla.cn",
-    "fetched_at": "2026-10-01T07:29:29.334844+00:00"
+    "fetched_at": "2026-09-30T07:04:32.047162+00:00",
+    "recall_history": ""
   }
 ]
