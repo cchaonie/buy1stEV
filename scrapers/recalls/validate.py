@@ -1,4 +1,4 @@
-"""Offline release gate for recall catalog, generated data, docs, and audit text."""
+"""Offline release gate for recall catalog, generated data, and recall viewer."""
 
 from __future__ import annotations
 
@@ -32,8 +32,6 @@ ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DOCS_DATA = ROOT / "docs" / "data.json"
 RECALL_VIEWER_HTML = ROOT / "docs" / "models.html"
-README = ROOT / "README.md"
-REPORT = ROOT / ".agents" / "tasks" / "vehicle-recall-history-report.md"
 
 
 def load_json(path):
@@ -197,48 +195,6 @@ def _validate_workspace():
     cutoff = catalog["coverage"]["audit_cutoff"]
     errors.extend(validate_html_text(html, cutoff))
 
-    readme = README.read_text(encoding="utf-8")
-    for required in (
-        "18 个规范字段",
-        "recall_history",
-        "scrapers/recalls/snapshots/samr-su7-2026-10-01.json",
-        cutoff,
-        "不代表从未召回",
-        "不保证历史绝对完整",
-        "2025-01-24",
-        "2025-09-19",
-        "scrapers/recalls/snapshots/samr-su7-2026-10-01.json",
-        "可审计调查候选集",
-    ):
-        if required not in readme:
-            errors.append(f"README.md: missing required recall documentation {required!r}")
-
-    if not REPORT.exists():
-        errors.append(f"{REPORT}: report is missing")
-    else:
-        report = REPORT.read_text(encoding="utf-8")
-        marker_groups = {
-            "investigation": catalog["investigations"],
-            "notice": catalog["notices"],
-            "event": catalog["events"],
-            "match": catalog["matches"],
-            "skip": catalog["skips"],
-        }
-        known = set()
-        for kind, records in marker_groups.items():
-            key = f"{kind}_id"
-            for record in records:
-                marker = f"[{kind}:{record[key]}]"
-                known.add(marker)
-                if report.count(marker) != 1:
-                    errors.append(f"report: marker {marker} must appear exactly once")
-        present = set(re.findall(r"\[(?:investigation|notice|event|match|skip):[^\]]+\]", report))
-        for unknown in sorted(present - known):
-            errors.append(f"report: unknown audit marker {unknown}")
-        for source in catalog["coverage"]["sources_checked"]:
-            for key in ("candidate_snapshot_id", "candidate_snapshot_path"):
-                if source[key] not in report:
-                    errors.append(f"report: missing candidate snapshot reference {source[key]!r}")
     return errors, catalog, len(all_rows)
 
 

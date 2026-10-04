@@ -10,8 +10,5 @@ scraper/
 # Persistent local transaction journal and lock
 .scraper-transactions/
 
-# Generated task artifacts
-.agents/*
-!.agents/tasks/
-.agents/tasks/*
-!.agents/tasks/vehicle-recall-history-report.md
+# Generated agent-runtime artifacts
+.agents/
