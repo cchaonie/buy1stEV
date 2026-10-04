@@ -31,7 +31,7 @@ from scrapers.run_all import BRAND_REGISTRY, BRAND_KEYS, REGISTRY
 ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 DOCS_DATA = ROOT / "docs" / "data.json"
-INDEX_HTML = ROOT / "docs" / "index.html"
+RECALL_VIEWER_HTML = ROOT / "docs" / "models.html"
 README = ROOT / "README.md"
 REPORT = ROOT / ".agents" / "tasks" / "vehicle-recall-history-report.md"
 
@@ -107,19 +107,19 @@ def validate_html_text(html, cutoff):
         for source_id, item in OFFICIAL_SOURCES.items()
     }
     if len(parser.host_payloads) != 1:
-        errors.append("docs/index.html: expected one #recall-source-hosts")
+        errors.append("docs/models.html: expected one #recall-source-hosts")
     else:
         try:
             actual_hosts = json.loads(parser.host_payloads[0])
             if actual_hosts != expected_hosts:
                 errors.append(
-                    "docs/index.html: official source host mapping differs from Python source"
+                    "docs/models.html: official source host mapping differs from Python source"
                 )
         except json.JSONDecodeError as exc:
-            errors.append(f"docs/index.html: invalid source host JSON: {exc}")
+            errors.append(f"docs/models.html: invalid source host JSON: {exc}")
     if parser.coverage != [cutoff]:
         errors.append(
-            "docs/index.html: coverage cutoff element missing, duplicated, or stale"
+            "docs/models.html: coverage cutoff element missing, duplicated, or stale"
         )
     for required in (
         "召回信息",
@@ -136,7 +136,7 @@ def validate_html_text(html, cutoff):
     ):
         if required not in html:
             errors.append(
-                f"docs/index.html: missing required UI/security token {required!r}"
+                f"docs/models.html: missing required UI/security token {required!r}"
             )
     return errors
 
@@ -193,7 +193,7 @@ def _validate_workspace():
     if len(schema.FIELDS) != 18 or schema.FIELDS[-1] != "recall_history" or schema.LABELS.get("recall_history") != "召回信息":
         errors.append("scrapers/core/schema.py: recall_history must be field 18 labeled 召回信息")
 
-    html = INDEX_HTML.read_text(encoding="utf-8")
+    html = RECALL_VIEWER_HTML.read_text(encoding="utf-8")
     cutoff = catalog["coverage"]["audit_cutoff"]
     errors.extend(validate_html_text(html, cutoff))
 
@@ -541,7 +541,7 @@ def run_self_test():
     if not validate_recall_value("", "expected", "test/model"):
         cases.append("missing projection: expected validation failure")
 
-    html = INDEX_HTML.read_text(encoding="utf-8")
+    html = RECALL_VIEWER_HTML.read_text(encoding="utf-8")
     cutoff = catalog["coverage"]["audit_cutoff"]
     broken_host_html = re.sub(
         r'(<script id="recall-source-hosts" type="application/json">).*?(</script>)',
