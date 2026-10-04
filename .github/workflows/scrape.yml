@@ -2,7 +2,7 @@ name: scrape-and-publish
 
 on:
   schedule:
-    - cron: '30 1 * * *' # daily 01:30 UTC
+    - cron: '0 17 * * 0' # daily 01:30 UTC
   workflow_dispatch: {}
 
 permissions:

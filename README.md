@@ -4,7 +4,7 @@
 
 **Buy your first EV — a unified dataset of on-sale Chinese EV models, scraped nightly from official brand sources.**
 
-数据每日自动更新：所有数字均来自品牌官方源（官网 / 官方 API），不经过第三方聚合站。
+数据每周一自动更新：所有数字均来自品牌官方源（官网 / 官方 API），不经过第三方聚合站。
 
 ---
 
@@ -175,7 +175,7 @@ JSON 为 UTF-8 无转义（`ensure_ascii=False`）；CSV 为 `utf-8-sig` 编码�
 
 | 工作流             | 触发                                            | 作用                                                             |
 | ------------------ | ----------------------------------------------- | ---------------------------------------------------------------- |
-| `scrape.yml`       | 每日 01:30 UTC + 手动                           | 抓取 → 构建 → 提交 `data/*`、`docs/*`（`[skip ci]`）→ 发布 Pages |
+| `scrape.yml`       | 每周一北京时间 01:00 + 手动                     | 抓取 → 构建 → 提交 `data/*`、`docs/*`（`[skip ci]`）→ 发布 Pages |
 | `deploy-pages.yml` | push 到 `main` 且涉及 `data/`、`docs/`、`site/` | 重新构建并发布 Pages                                             |
 
 提交信息固定为 `chore: refresh vehicle data [skip ci]`，因此 `main` 的历史即为数据快照时间线。
