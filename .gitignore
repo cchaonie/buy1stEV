@@ -11,4 +11,7 @@ scraper/
 .scraper-transactions/
 
 # Generated task artifacts
-.agents/
+.agents/*
+!.agents/tasks/
+.agents/tasks/*
+!.agents/tasks/vehicle-recall-history-report.md

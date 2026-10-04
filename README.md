@@ -13,8 +13,8 @@
 1. **抓取**：每个品牌一个独立适配器（`scrapers/<brand>/scraper.py`），负责请求官方源、解析出该品牌特有的结构。
 2. **归一**：所有适配器输出同一套字段（`scrapers/core/schema.py`），写入 `data/<brand>.json` 与 `data/<brand>.csv`。
 3. **合并**：`site/build_site.py` 把所有 `data/*.json` 合并为 `docs/data.json`。
-4. **展示**：`docs/index.html` 是一个零依赖的纯前端页面（原生 JS），读取 `docs/data.json` 后渲染成可搜索、可筛选、可排序的表格，通过 GitHub Pages 发布。过长的「定位亮点」默认截断为 3 行，可点「查看更多」展开。
-5. **召回审计**：`scrapers/recalls/` 是受 `scrapers/run_all.py` 正式调度的 enrichment adapter；它从版本控制的官方候选快照和 catalog 生成 `recall_history` projection，并在统一 `write_brand()` 前合并到品牌 records。writer 与站点构建器不读取、注入或补写召回数据；`scrapers.recalls.validate` 离线阻断不一致数据。
+4. **展示**：`docs/index.html` 是 GitHub Pages 的购车指南入口页；`docs/models.html` 是零依赖的原生 JS 数据与召回查看器，读取 `docs/data.json` 后渲染成可搜索、可筛选、可排序的表格。过长的「定位亮点」默认截断为 3 行，可点「查看更多」展开。
+5. **召回审计**：`scrapers/recalls/` 是受 `scrapers/run_all.py` 正式调度的 enrichment adapter；它从版本控制的官方候选快照和 catalog 生成 `recall_history` projection，并在统一 `write_brand()` 前合并到品牌 records。writer 与站点构建器不读取、注入或补写召回数据；`scrapers.recalls.validate` 离线阻断 catalog、生成数据与 `docs/models.html` 查看器之间的不一致。
 
 整个流程由 GitHub Actions 每天定时执行，抓取结果自动提交回仓库。
 
@@ -52,7 +52,8 @@ buy1stEV/
 ├── data/                  # 抓取产物（每品牌 json + csv，提交进仓库）
 ├── site/build_site.py     # 合并 data/*.json -> docs/data.json
 ├── docs/                  # GitHub Pages 根目录
-│   ├── index.html         # 静态查看器（原生 JS，无构建步骤）
+│   ├── index.html         # 购车指南入口页
+│   ├── models.html        # 数据与召回查看器（原生 JS，fetch data.json）
 │   ├── data.json          # 合并后的全量数据
 │   └── logos/             # 品牌车标
 └── .github/workflows/
@@ -109,11 +110,12 @@ OK: xiaomi -> 5 records -> .../data/xiaomi.json
 
 ### 本地预览页面
 
-查看器使用 `fetch("data.json")`，受同源策略限制，**必须通过 HTTP 服务打开**，直接双击 `file://` 会加载失败：
+数据与召回查看器 `docs/models.html` 使用 `fetch("data.json")`，受同源策略限制，**必须通过 HTTP 服务打开**，直接双击 `file://` 会加载失败：
 
 ```bash
 .venv/bin/python -m http.server 8000 --directory docs
-# 打开 http://localhost:8000/
+# 购车指南入口：http://localhost:8000/
+# 数据与召回查看器：http://localhost:8000/models.html
 ```
 
 ## 数据字段
@@ -182,7 +184,7 @@ JSON 为 UTF-8 无转义（`ensure_ascii=False`）；CSV 为 `utf-8-sig` 编码�
 
 1. 新建 `scrapers/<key>/scraper.py`，暴露 `fetch() -> list[dict]`，用 `schema.new_record()` 初始化、`schema` 里的常量做映射，网络请求统一走 `call_with_retry`。
 2. 在 `scrapers/run_all.py` 的 `REGISTRY` 中登记 `(key, "scrapers.<key>.scraper", "fetch")`。
-3. 把车标放进 `docs/logos/`，并在 `docs/index.html` 的 `LOGOS` 映射里加上「中文品牌名 → 车标路径」。
+3. 把车标放进 `docs/logos/`，并在 `docs/models.html` 的 `LOGOS` 映射里加上「中文品牌名 → 车标路径」。
 
 ## 免责声明
 

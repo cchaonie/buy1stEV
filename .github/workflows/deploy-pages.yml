@@ -13,6 +13,8 @@ on:
       - 'scrapers/core/transactions.py'
       - 'scrapers/core/schema.py'
       - 'scrapers/core/writer.py'
+      - '.agents/tasks/vehicle-recall-history-report.md'
+      - '.gitignore'
   workflow_dispatch: {}
 
 permissions:
