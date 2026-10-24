@@ -230,12 +230,12 @@ def _transaction_fixture(root: Path):
         new[csv_target] = csv_bytes(changed)
         payloads[json_target] = new[json_target]
         payloads[csv_target] = new[csv_target]
-    if len(all_rows) != 91 or validate_vehicle_records(all_rows):
-        raise AssertionError("transaction fixture must contain 91 valid vehicle records")
-    return payloads, old, new
+    if not all_rows or validate_vehicle_records(all_rows):
+        raise AssertionError("transaction fixture must contain valid vehicle records")
+    return payloads, old, new, len(all_rows)
 
 
-def _assert_transaction_batch(root: Path, old: dict[Path, bytes], new: dict[Path, bytes], expected: str) -> None:
+def _assert_transaction_batch(root: Path, old: dict[Path, bytes], new: dict[Path, bytes], expected: str, expected_count: int) -> None:
     actual = {target: target.read_bytes() for target in old}
     expected_bytes = old if expected == "old" else new
     if actual != expected_bytes:
@@ -255,8 +255,8 @@ def _assert_transaction_batch(root: Path, old: dict[Path, bytes], new: dict[Path
         if csv_path.read_bytes() != csv_bytes(brand_rows):
             raise AssertionError(f"transaction recovery changed CSV fields: {csv_path}")
         rows.extend(brand_rows)
-    if len(rows) != 91 or validate_vehicle_records(rows):
-        raise AssertionError("transaction recovery must preserve 91 valid records")
+    if len(rows) != expected_count or validate_vehicle_records(rows):
+        raise AssertionError("transaction recovery must preserve the original record count")
     artifacts = {path.name for path in (root / ".scraper-transactions").iterdir()}
     if artifacts != {".lock"}:
         raise AssertionError(f"transaction artifacts leaked: {sorted(artifacts)}")
@@ -266,7 +266,7 @@ def run_transaction_recovery_self_test() -> int:
     """Exercise every durable transaction boundary with uncaught crash semantics."""
     with tempfile.TemporaryDirectory(prefix="recall-transaction-") as directory:
         root = Path(directory)
-        payloads, old, new = _transaction_fixture(root)
+        payloads, old, new, expected_count = _transaction_fixture(root)
         ordered_count = len(payloads)
         scenarios = [
             ("first backup", lambda point, ordinal: point == "after_backup" and ordinal == 0, "old"),
@@ -302,11 +302,11 @@ def run_transaction_recovery_self_test() -> int:
             # A new process/session recovers while holding the same exclusive lock.
             with TransactionSession(root):
                 pass
-            _assert_transaction_batch(root, old, new, expected)
+            _assert_transaction_batch(root, old, new, expected, expected_count)
 
         with TransactionSession(root) as session:
             write_bytes_many(payloads, session)
-        _assert_transaction_batch(root, old, new, "new")
+        _assert_transaction_batch(root, old, new, "new", expected_count)
     return len(scenarios) + 1
 
 
@@ -337,8 +337,9 @@ def run_registry_integration_self_test() -> int:
     if set(pending) != set(BRAND_KEYS):
         raise AssertionError("registry integration produced unauthorized brand keys")
     merged = [row for rows in pending.values() for row in rows]
-    if len(merged) != 91 or validate_vehicle_records(merged):
-        raise AssertionError("registry integration did not preserve 91 valid records")
+    source_count = sum(len(rows) for rows in source_records.values())
+    if len(merged) != source_count or validate_vehicle_records(merged):
+        raise AssertionError("registry integration did not preserve the source record count")
     expected = expected_items(projection.catalog)
     for entry in BRAND_REGISTRY:
         before = source_records[entry.key]
