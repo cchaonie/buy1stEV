@@ -1,0 +1,564 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "samr-brands-2026-10-24",
+  "source_id": "samr",
+  "official_index_url": "https://www.samr.gov.cn/zw/zh/index.html",
+  "retrieved_on": "2026-10-24",
+  "publication_searched_from": "2018-04-11",
+  "publication_searched_through": "2026-10-16",
+  "query_description": "读取国家市场监督管理总局召回栏目索引的全部 1434 条记录（2018-04-11 至 2026-10-16），按当前八个品牌的标题筛选 55 条候选，并逐篇打开官方正文核验。",
+  "scope": "截至 2026-10-24 对召回索引按当前车型库八个品牌筛选的官方候选集；只有能与在售车系、生产期和代际保守对齐的公告进入车型记录，其余保留为排除审计。不是全国召回史全量。",
+  "candidates": [
+    {
+      "candidate_id": "samr-su7-2025-01-24",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_589f94caf6ad48a484fcf97135ca3eb5.html",
+      "title": "小米汽车科技有限公司召回部分SU7标准版 电动汽车",
+      "announcement_date": "2025-01-24",
+      "official_scope": "2024年2月6日至2024年11月26日生产的部分SU7标准版电动汽车。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-su7-2025-01",
+      "decision_reason": "官方正文完整，已核验为召回公告并保守匹配至当前车型库 SU7 车系。"
+    },
+    {
+      "candidate_id": "samr-su7-2025-09-19",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_2152a981c72a430b9d10d6ef5cd9c09b.html",
+      "title": "小米汽车科技有限公司召回部分SU7标准版 电动汽车",
+      "announcement_date": "2025-09-19",
+      "official_scope": "2024年2月6日至2025年8月30日生产的部分SU7标准版电动汽车。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-su7-2025-09",
+      "decision_reason": "官方正文完整，已核验为召回公告并保守匹配至当前车型库 SU7 车系。"
+    },
+    {
+      "candidate_id": "samr-b455413dfe",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_ca24f13c6c0f4138b53a0c3753d022bd.html",
+      "title": "蔚来汽车科技（安徽）有限公司召回部分萤火虫纯电动汽车",
+      "announcement_date": "2026-09-18",
+      "official_scope": "蔚来汽车科技（安徽）有限公司召回部分萤火虫纯电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-b455413dfe-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-5fcfbb496d",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_042951c948554f3cba5823e3ddd1b4cf.html",
+      "title": "比亚迪汽车工业有限公司、比亚迪汽车有限公司召回部分国产汽车",
+      "announcement_date": "2026-09-18",
+      "official_scope": "比亚迪汽车工业有限公司、比亚迪汽车有限公司召回部分国产汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-5fcfbb496d-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-e807e6574b",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_4223bf2706a84189b425d58124dbac7d.html",
+      "title": "特斯拉（上海）有限公司、特斯拉汽车（北京）有限公司召回部分国产及进口纯电动汽车",
+      "announcement_date": "2026-08-21",
+      "official_scope": "召回编号S2026M0098V：自2026年9月25日起，召回2019年3月4日至2026年4月29日期间生产的部分国产Model 3电动汽车，共计973156辆；2020年11月16日至2026年4月30日期间生产的部分国产Model Y电动汽车，共计1956713辆。召回编号S2026M0099V：自2026年9月25日起，召回2018年8月22日至2019年11月20日期间生产的部分进口Model 3电动汽车，共计35590辆；2022年10月27日至2026年2月13日期间生产的部分进口Model X电动汽车，共计8328辆；2023年1月18日至2026年2月10日期间生产的部分进口Model S电动汽车，共计2123辆。召回编号S2026M0039I：自即日起，召回2019年3月4日至2025年12月7日期间生产的部分国产Model 3、Model Y电动汽车，共计2740642辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-e807e6574b",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-e078dd5528",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_b185a40c15154318ac619aef4f8775d8.html",
+      "title": "小米汽车科技有限公司召回部分2024款小米牌SU7系列纯电动汽车",
+      "announcement_date": "2026-08-21",
+      "official_scope": "一、召回编号S2026M0096V：自即日起，召回2024年8月8日至2026年3月4日生产的部分2024款小米SU7系列纯电动汽车，共计339069台。二、召回编号S2026M0097V：自即日起，召回2023年12月27日至2024年8月16日生产的部分2024款小米SU7系列纯电动汽车，共计51366台。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-e078dd5528",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-b29e1b9feb",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_7ca05c26ff7244a08bc50fa29acb17e6.html",
+      "title": "肇庆小鹏新能源投资有限公司召回部分小鹏G6、P7+、X9汽车",
+      "announcement_date": "2026-08-21",
+      "official_scope": "召回编号S2026M0101V：自2026年8月22日起，召回2023年4月7日至2025年12月22日期间生产的部分小鹏G6汽车，共计134588辆；2024年7月23日至2025年12月10日期间生产的部分小鹏P7+汽车，共计94688辆；2023年8月8日至2025年9月26日期间生产的部分小鹏X9汽车，共计35566辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-b29e1b9feb",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-34e778693e",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_be001c00f11746ce887bd72dfefaf98c.html",
+      "title": "浙江吉利汽车有限公司召回部分极氪007和极氪X汽车",
+      "announcement_date": "2026-08-21",
+      "official_scope": "召回编号S2026M0102V：自2026年8月24日起，召回2023年3月1日至2026年5月21日期间生产的部分极氪007和极氪X汽车，共计92658辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-34e778693e",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-5079316132",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_e07d1de25b4c4bfb80e744d849ae1bd7.html",
+      "title": "肇庆小鹏新能源投资有限公司召回部分小鹏X9汽车",
+      "announcement_date": "2026-07-24",
+      "official_scope": "召回编号S2026M0082V：自2026年8月28日起，召回2023年8月8日至2025年8月11日期间生产的小鹏X9汽车，共计33473辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-5079316132",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-8a203ed4d7",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_b053f33ab0e34706938e2a3caca6e186.html",
+      "title": "浙江极氪智能科技有限公司召回部分 极氪001WE版汽车",
+      "announcement_date": "2026-02-09",
+      "official_scope": "召回编号S2026M0023V：自2026年3月6日起，召回生产日期从2021年7月8日至2024年3月18日期间生产的部分极氪001WE版汽车，共计38277辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-8a203ed4d7",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-79029cedb2",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2026/art_3a8215ef00cc4f349c5c601d054c20b9.html",
+      "title": "上海蔚来汽车有限公司召回部分ES8、ES6、 EC6纯电动汽车",
+      "announcement_date": "2026-02-09",
+      "official_scope": "召回编号S2026M0017I：自即日起，召回2018年3月16日至2023年1月16日期间生产的ES8、ES6和EC6纯电动汽车，共计246229辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-79029cedb2",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-93c3f69bc7",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_94d5b59d5f4c4420baae386c463c9717.html",
+      "title": "比亚迪汽车工业有限公司、比亚迪汽车有限公司召回部分秦PLUS DM-i汽车",
+      "announcement_date": "2025-11-28",
+      "official_scope": "比亚迪汽车工业有限公司、比亚迪汽车有限公司召回部分秦PLUS DM-i汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-93c3f69bc7-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-3131b5487e",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_60ee70be50b2453f8caa579feebb40eb.html",
+      "title": "北京理想汽车有限公司召回部分 理想MEGA 2024款电动汽车",
+      "announcement_date": "2025-10-31",
+      "official_scope": "召回编号S2025M0174V：自2025年11月7日起，召回生产日期从2024年2月18日至2024年12月27日的理想MEGA 2024款汽车，共计11411辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-3131b5487e",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-a68d43d44c",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_4346e26ed0704a69a5c0b14ab1854534.html",
+      "title": "比亚迪汽车工业有限公司召回部分唐、元Pro 汽车",
+      "announcement_date": "2025-10-17",
+      "official_scope": "比亚迪汽车工业有限公司召回部分唐、元Pro 汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-a68d43d44c-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-b72c4e0e7a",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_3cfec5c331fb4f1e8cc9bc9bf6bbef67.html",
+      "title": "肇庆小鹏新能源投资有限公司召回部分小鹏P7+汽车",
+      "announcement_date": "2025-09-12",
+      "official_scope": "召回编号S2025M0142V：自2025年9月15日起，召回2024年8月20日至2025年4月27日期间生产的部分小鹏P7+汽车，共计47490辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-b72c4e0e7a",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-5dc57c5caf",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_473b221b409943889be9864d21a2b870.html",
+      "title": "小米通讯技术有限公司召回部分MI牌PB2030MI型充电宝产品",
+      "announcement_date": "2025-08-29",
+      "official_scope": "小米通讯技术有限公司召回部分MI牌PB2030MI型充电宝产品",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-5dc57c5caf-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-97b88fe2b0",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_e7b3e5b0d5fe433e8395e97a867938ff.html",
+      "title": "比亚迪汽车工业有限公司召回部分方程豹豹5 插电式混合动力汽车",
+      "announcement_date": "2025-01-24",
+      "official_scope": "比亚迪汽车工业有限公司召回部分方程豹豹5 插电式混合动力汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-97b88fe2b0-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-5a1c82b112",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2025/art_01124263b03746559d2e267f747a29dc.html",
+      "title": "特斯拉（上海）有限公司、特斯拉汽车（北京）有限公司召回部分进口及国产电动汽车",
+      "announcement_date": "2025-01-24",
+      "official_scope": "日前，特斯拉（上海）有限公司、特斯拉汽车（北京）有限公司根据《缺陷汽车产品召回管理条例》和《缺陷汽车产品召回管理条例实施办法》的要求，向国家市场监督管理总局备案了召回计划。决定自即日起，召回以下车辆。一、召回生产日期在2023年7月16日至2024年12月14日期间的部分进口Model S、Model X及国产Model 3、Model Y电动汽车，共计335716辆。二、召回生产日期在2022年1月3日至2023年9月23日期间的部分国产Model 3、Model Y电动汽车，共计871087辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-5a1c82b112",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-836ad85851",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2024/art_62667eab12aa4bf7a3dd1c771764ddea.html",
+      "title": "特斯拉（上海）有限公司、特斯拉汽车（北京）有限公司召回部分进口及国产电动汽车",
+      "announcement_date": "2024-12-31",
+      "official_scope": "自即日起，召回生产日期在2021年9月28日至2024年11月22日的部分国产Model 3和Model Y电动汽车，共计77650辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-836ad85851",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-6b079a350c",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2024/art_32cccf03b3624afcb508c7453f1170fc.html",
+      "title": "比亚迪汽车工业有限公司、比亚迪汽车有限公司召回部分国产海豚、元PLUS电动汽车",
+      "announcement_date": "2024-09-29",
+      "official_scope": "比亚迪汽车工业有限公司、比亚迪汽车有限公司召回部分国产海豚、元PLUS电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-6b079a350c-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-f4eca43e5c",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2024/art_68c21586949a48e3993e1c8b6d12b74f.html",
+      "title": "特斯拉汽车（北京）有限公司 再次召回部分进口Model X电动汽车",
+      "announcement_date": "2024-08-30",
+      "official_scope": "特斯拉汽车（北京）有限公司 再次召回部分进口Model X电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-f4eca43e5c-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-1f387e0856",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2024/art_1280c0fe1ab74a57bb9e499443790972.html",
+      "title": "特斯拉汽车（北京）有限公司、特斯拉 （上海）有限公司召回部分进口Model S、 Model X及国产Model 3、Model Y电动汽车",
+      "announcement_date": "2024-08-06",
+      "official_scope": "日前，特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司根据《缺陷汽车产品召回管理条例》和《缺陷汽车产品召回管理条例实施办法》的要求，向国家市场监督管理总局备案了召回计划。自即日起，召回生产日期在2020年10月15日至2024年7月17日期间的部分进口Model S、Model X及国产Model 3、Model Y电动汽车，共计1683627辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-1f387e0856",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-4ea4338401",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2024/art_08e61f2275bd4470b51aa1a6d58bb2c8.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口 Model 3、Model S和Model X电动汽车",
+      "announcement_date": "2024-06-14",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口 Model 3、Model S和Model X电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-4ea4338401-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-05f330a038",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2024/art_340a5f5ace94401b8319cdcac0cc8175.html",
+      "title": "比亚迪汽车有限公司召回部分海鸥电动汽车",
+      "announcement_date": "2024-04-30",
+      "official_scope": "比亚迪汽车有限公司召回部分海鸥电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-05f330a038-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-02a938dcc6",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2024/art_aa0e25e5c4ec4f9d867e353c34e8ec59.html",
+      "title": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口Model S、Model X和国产Model 3电动汽车",
+      "announcement_date": "2024-02-23",
+      "official_scope": "日前，特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司根据《缺陷汽车产品召回管理条例》和《缺陷汽车产品召回管理条例实施办法》的要求，向国家市场监督管理总局备案了召回计划。自即日起，召回生产日期在2023年1月27日至2024年1月7日期间的部分进口Model S、Model X电动汽车，共计1071辆；生产日期在2023年9月12日至2024年1月12日期间的部分国产Model 3电动汽车，共计7629辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-02a938dcc6",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-ebf0031300",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2024/art_b49c223a2b9d456ebad51c4a162d229e.html",
+      "title": "特斯拉（上海）有限公司、特斯拉汽车（北京）有限公司召回部分进口及国产电动汽车",
+      "announcement_date": "2024-01-05",
+      "official_scope": "特斯拉（上海）有限公司、特斯拉汽车（北京）有限公司召回部分进口及国产电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-ebf0031300-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-b386fb28d1",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_5291a86a78784e2c992c4e874eabe3a4.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口 Model X电动汽车",
+      "announcement_date": "2023-11-24",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口 Model X电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-b386fb28d1-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-6a12c2b0c7",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_7530a3cdb19c4a55af6bd4d166cb9283.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分 进口Model X电动汽车",
+      "announcement_date": "2023-10-20",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分 进口Model X电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-6a12c2b0c7-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-db4ef9c0ac",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_b368bf91d6264c459315874b865f107c.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口 Model S和Model X电动汽车",
+      "announcement_date": "2023-08-04",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口 Model S和Model X电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-db4ef9c0ac-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-80c921d8cf",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_2f4ff4717aec41e3af2e28739732d97d.html",
+      "title": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口及国产Model 3 、Model Y汽车",
+      "announcement_date": "2023-05-12",
+      "official_scope": "日前，特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司根据《缺陷汽车产品召回管理条例》和《缺陷汽车产品召回管理条例实施办法》的要求，向国家市场监督管理总局备案了召回计划。自2023年5月29日起，召回生产日期在2019年1月12日至2023年4月24日期间的部分进口Model S、 Model X 、Model 3及国产Model 3 、Model Y汽车，共计1104622辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-80c921d8cf",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-53058d1366",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_accbfcf653784d5b928c89a162179337.html",
+      "title": "特斯拉汽车（北京）有限公司扩大召回部分进口Model S电动汽车",
+      "announcement_date": "2023-03-24",
+      "official_scope": "特斯拉汽车（北京）有限公司扩大召回部分进口Model S电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-53058d1366-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-661e29f8fb",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_7455825873824aa2915911578092694e.html",
+      "title": "上海蔚来汽车有限公司召回部分蔚来ET5电动汽车",
+      "announcement_date": "2023-01-06",
+      "official_scope": "决定自2023年1月6日起，召回2022年9月7日至2022年10月10日期间生产的部分2022年款蔚来ET5电动汽车，共计997辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-661e29f8fb",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-646bb87389",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_230e0838c7e64d16a5f91130c312da69.html",
+      "title": "特斯拉（上海）有限公司召回部分国产Model 3和Model Y电动汽车",
+      "announcement_date": "2022-12-01",
+      "official_scope": "特斯拉（上海）有限公司召回部分国产Model 3和Model Y电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-646bb87389-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-71af788683",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_00e54a26eeb64d6192b10f68e07a079c.html",
+      "title": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口Model S、Model X及部分进口和国产Model 3电动汽车",
+      "announcement_date": "2022-11-25",
+      "official_scope": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口Model S、Model X及部分进口和国产Model 3电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-71af788683-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-0e1c374e25",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_f2d84f0ca1f24370981a9ebfeb11725a.html",
+      "title": "比亚迪汽车工业有限公司扩大召回部分唐DM电动汽车",
+      "announcement_date": "2022-07-29",
+      "official_scope": "比亚迪汽车工业有限公司扩大召回部分唐DM电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-0e1c374e25-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-1706624499",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_5dfa2cc417b847568935dc862432220c.html",
+      "title": "特斯拉（上海）有限公司召回部分国产Model 3和Model Y电动汽车",
+      "announcement_date": "2022-05-16",
+      "official_scope": "特斯拉（上海）有限公司召回部分国产Model 3和Model Y电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-1706624499-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-bf2bc434b1",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_75b795f766fe4881be6b91d3e5239a0c.html",
+      "title": "比亚迪汽车工业有限公司召回部分唐DM电动汽车",
+      "announcement_date": "2022-04-29",
+      "official_scope": "比亚迪汽车工业有限公司召回部分唐DM电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-bf2bc434b1-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-3ea740d03d",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_0d86d271e77441e3ace64d310ae8ff35.html",
+      "title": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口及国产Model 3高性能版电动汽车",
+      "announcement_date": "2022-04-29",
+      "official_scope": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口及国产Model 3高性能版电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-3ea740d03d-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-942d334a6c",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_ae40442941c8426b8fdfe6743c235370.html",
+      "title": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口及国产Model 3电动汽车",
+      "announcement_date": "2022-04-07",
+      "official_scope": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口及国产Model 3电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-942d334a6c-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-c71196aa47",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_6206d00369464a56b054821d47fef27e.html",
+      "title": "特斯拉（上海）有限公司召回部分国产Model 3和Model Y电动汽车",
+      "announcement_date": "2022-02-18",
+      "official_scope": "特斯拉（上海）有限公司召回部分国产Model 3和Model Y电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-c71196aa47-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-a08d51908a",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_73f34d736a6a4f849c52ac650dbc4d6e.html",
+      "title": "特斯拉汽车（北京）有限公司、特斯拉(上海)有限公司召回部分进口Model S、进口和国产Model 3电动汽车",
+      "announcement_date": "2021-12-31",
+      "official_scope": "特斯拉汽车（北京）有限公司、特斯拉(上海)有限公司召回部分进口Model S、进口和国产Model 3电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-a08d51908a-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-7ca67975e1",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_a913d99ee9fc49cbb1a5ad7789590591.html",
+      "title": "特斯拉（上海）有限公司召回部分国产Model Y电动汽车",
+      "announcement_date": "2021-12-03",
+      "official_scope": "特斯拉（上海）有限公司召回部分国产Model Y电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-7ca67975e1-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-26acfd39d9",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_8bd9024a2e5c463c86172f273d63a2ed.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口Model 3电动汽车",
+      "announcement_date": "2021-11-05",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口Model 3电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-26acfd39d9-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-5fc6b8b6a9",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_2a15532ce00945089b6e0df9df4e5bfb.html",
+      "title": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口和国产Model 3、国产Model Y电动汽车",
+      "announcement_date": "2021-06-26",
+      "official_scope": "特斯拉汽车（北京）有限公司、特斯拉（上海）有限公司召回部分进口和国产Model 3、国产Model Y电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-5fc6b8b6a9-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-0e68780aef",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_d2112f45da31454f8868ca538232e6f3.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口Model 3电动汽车",
+      "announcement_date": "2021-06-03",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口Model 3电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-0e68780aef-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-72f63ef9bb",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_3fe6a102bde74bb4a19eb5a01834ffc2.html",
+      "title": "比亚迪汽车有限公司召回部分e5、宋DM电动汽车",
+      "announcement_date": "2021-04-30",
+      "official_scope": "比亚迪汽车有限公司召回部分e5、宋DM电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-72f63ef9bb-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-755d90a407",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_78f692b5a0a0409981c859068e487153.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口Model S、Model X电动汽车",
+      "announcement_date": "2021-02-05",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口Model S、Model X电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-755d90a407-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-a1da51e5b9",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_5d51278eced34b9e9513cfddbdc30153.html",
+      "title": "关于部分小鹏G3电动汽车召回的通知",
+      "announcement_date": "2021-01-29",
+      "official_scope": "关于部分小鹏G3电动汽车召回的通知",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-a1da51e5b9-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-718d047d5c",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_1e4dcd7ca33b434d8f44e80ecb4b467e.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口Model X电动汽车",
+      "announcement_date": "2020-11-27",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口Model X电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-718d047d5c-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-5034b0b565",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_ab74689284974704a5c55a4e4dc73e58.html",
+      "title": "重庆理想汽车有限公司召回部分理想ONE电动汽车",
+      "announcement_date": "2020-11-06",
+      "official_scope": "重庆理想汽车有限公司召回部分理想ONE电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-5034b0b565-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-c6e2670c14",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_ffa83f845c8c48579aff85ec3c6321bf.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口Model S、Model X电动汽车",
+      "announcement_date": "2020-10-23",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口Model S、Model X电动汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-c6e2670c14-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-c0e66cc137",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_4e7acbe76dc64bcf9391bf0b69ead1d2.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分Model X系列汽车",
+      "announcement_date": "2020-02-14",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分Model X系列汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-c0e66cc137-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-e4254c4778",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_bc3cdaca9b65477a8faed0ccce21fb7c.html",
+      "title": "关于部分蔚来 ES8电动汽车召回的通知",
+      "announcement_date": "2019-06-27",
+      "official_scope": "自2019年6月27日起，召回部分搭载了2018年4月2日到2018年10月19日期间生产的动力电池包的蔚来 ES8电动汽车，共计4803辆。",
+      "decision": "included_matched",
+      "investigation_id": "inv-samr-e4254c4778",
+      "decision_reason": "官方正文完整，且公告车系、生产期与代际可与当前车型库保守对齐。"
+    },
+    {
+      "candidate_id": "samr-e67de56229",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_48ac2d86bb15446791b4e6c120229ae4.html",
+      "title": "特斯拉汽车（北京）有限公司召回部分进口Model S系列汽车",
+      "announcement_date": "2019-01-18",
+      "official_scope": "特斯拉汽车（北京）有限公司召回部分进口Model S系列汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-e67de56229-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    },
+    {
+      "candidate_id": "samr-2cec4b7f07",
+      "official_url": "https://www.samr.gov.cn/zw/zh/art/2023/art_3b3a327c055b42ffbf6260c9c8854370.html",
+      "title": "比亚迪汽车工业有限公司召回部分腾势汽车",
+      "announcement_date": "2018-06-15",
+      "official_scope": "比亚迪汽车工业有限公司召回部分腾势汽车",
+      "decision": "excluded",
+      "investigation_id": "inv-samr-2cec4b7f07-excluded",
+      "decision_reason": "标题或正文所述车系、代际、生产期或产品类型不在当前车型库的保守匹配范围内。"
+    }
+  ],
+  "snapshot_sha256": "1c249ad50a67a64bb4ac25289ce8b541c493aa834e5f9a37e7fd1e0454407000"
+}

@@ -140,9 +140,11 @@ JSON 为 UTF-8 无转义（`ensure_ascii=False`）；CSV 为 `utf-8-sig` 编码�
 
 ### 召回资料的来源、覆盖与维护
 
-当前召回清单的审计截止日为 **2026-10-01**。本轮候选输入固定在版本控制的 [`scrapers/recalls/snapshots/samr-su7-2026-10-01.json`](scrapers/recalls/snapshots/samr-su7-2026-10-01.json)：该文件记录国家市场监督管理总局官方入口、检索/覆盖截止日、两条候选的稳定 ID、官方 URL、公告日、官方范围、调查决定和规范 SHA-256。`scrapers/recalls/catalog.json` 的来源行引用该快照及摘要；受调度的 recall adapter 在内存中生成 projection，`run_all` 在调用统一 writer 前将其融合进相应品牌 records。
+当前召回清单的审计截止日为 **2026-10-24**。本轮候选输入固定在版本控制的 [`scrapers/recalls/snapshots/samr-brands-2026-10-24.json`](scrapers/recalls/snapshots/samr-brands-2026-10-24.json)：该文件记录国家市场监督管理总局官方入口、检索/覆盖截止日、55 条目标品牌候选的稳定 ID、官方 URL、公告日、官方范围、调查决定和规范 SHA-256。`scrapers/recalls/catalog.json` 的来源行引用该快照及摘要；受调度的 recall adapter 在内存中生成 projection，`run_all` 在调用统一 writer 前将其融合进相应品牌 records。
 
-该快照是截至 **2026-10-01**、针对当前车型库 **小米 SU7** 车系的可审计调查候选集；国家市场监督管理总局来源在本次快照中实际检索的公告发布日期区间为 **2025-01-24 至 2025-09-19**：
+该快照是截至 **2026-10-24**、针对当前车型库八个品牌的可审计调查候选集。索引实际遍历区间为 **2018-04-11 至 2026-10-16**（1434 条公告），再按品牌标题筛出 55 条候选并逐篇核验官方正文。其中 18 个事件、28 个车型匹配进入数据，覆盖小米 SU7、特斯拉 Model 3/Model Y、小鹏 G6/P7+/X9、极氪 001/007/X、蔚来 ES8/ES6/EC6/ET5 和理想 MEGA；其余 37 条候选因车系、代际、生产期或产品类型不符而保留为排除审计。
+
+比亚迪和问界当前在售记录没有与公告代际可靠对齐的事件，因此仍显示“暂无已匹配记录”。这表示**当前在售代际未匹配**，不代表这些品牌从未召回；例如比亚迪 2026-09-18 公告涉及 2014–2022 年生产的唐/秦系列，并未硬套到 2026/2027 款记录。
 
 - 国家市场监督管理总局召回栏目：<https://www.samr.gov.cn/zw/zh/index.html>
 - 2025-01-24 SU7 标准版公告：<https://www.samr.gov.cn/zw/zh/art/2025/art_589f94caf6ad48a484fcf97135ca3eb5.html>
@@ -159,7 +161,7 @@ JSON 为 UTF-8 无转义（`ensure_ascii=False`）；CSV 为 `utf-8-sig` 编码�
 .venv/bin/python site/build_site.py
 ```
 
-每日 `run_all` 的 `recalls` registry entry 会先验证审计输入，再和每个品牌的 canonical records 融合，最后以单批事务写入八个品牌文件；单品牌命令同样先消费其范围内的 projection，不会清空小米的已审计历史。召回文字参与关键词搜索（机构、标题、日期、编号、范围、原因和措施）；折叠状态不影响搜索。
+每日 `run_all` 的 `recalls` registry entry 会先验证审计输入，再和每个品牌的 canonical records 融合，最后以单批事务写入八个品牌文件；单品牌命令同样先消费其范围内的 projection，不会清空其他品牌的已审计历史。召回文字参与关键词搜索（机构、标题、日期、编号、范围、原因和措施）；折叠状态不影响搜索。
 
 ### 已知口径与局限（查看数据时请注意）
 
